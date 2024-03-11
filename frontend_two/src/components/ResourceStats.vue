@@ -1,0 +1,187 @@
+<template>
+  <div class="lk_region">
+    <div class="region_info">
+      <div class="region_name">
+        Архангельск
+      </div>
+      <div class="region_qol">
+        <div class="region_qolInfo">
+          <div class="region_bar">
+            <div class="region_bar_activ" :style="{ width: barWidth, backgroundColor: barColor }"></div>
+          </div>
+          <div class="region_qolTitle" :style="{ color: barColor }">{{ overallAverage.toFixed(1) }}</div>
+        </div>
+        <div>Assessment of the quality of life</div>
+      </div>
+    </div>
+    <div class="region_filters">
+      <div v-for="resource in resources" :key="resource.resource_name">
+        <input type="checkbox" v-model="selectedResources" :value="resource.resource_name" @change="updateChartData" di> {{ resource.resource_name }}
+      </div>
+    </div>
+    <div class="region_chart">
+      <canvas id="marksChart" class="chart_canvas"></canvas>
+    </div>
+  </div>
+</template>
+
+<script>
+import Chart from 'chart.js/auto';
+
+export default {
+  data() {
+    return {
+      resources: [],
+      selectedResources: [], // массив для хранения выбранных ресурсов
+      chart: null, // переменная для хранения экземпляра графика
+      marksData: {
+        labels: [], // пустой массив для меток
+        datasets: [{
+          label: "Архангельск",
+          backgroundColor: "rgb(85,225,255, 0.2)",
+          data: [] // пустой массив для данных
+        }]
+      },
+      overallAverage: 0 // переменная для хранения общего среднего
+    };
+  },
+  computed: {
+    barWidth() {
+      // Вычисляем ширину полосы в зависимости от значения overallAverage
+      return (this.overallAverage / 10) * 100 + "%";
+    },
+    barColor() {
+      // Вычисляем цвет фона в зависимости от значения overallAverage
+      const hue = (this.overallAverage / 10) * 120; // Преобразуем overallAverage в оттенок цвета
+      return `hsl(${hue}, 100%, 50%)`; // Используем HSL для создания градиента цвета
+    },
+    titleColor() {
+      // Вычисляем цвет текста в зависимости от значения overallAverage
+      const hue = (this.overallAverage / 10) * 120; // Преобразуем overallAverage в оттенок цвета
+      const lightness = this.overallAverage >= 7 ? 50 : 100; // Устанавливаем яркость в зависимости от значения overallAverage
+      return `hsl(${hue}, 100%, ${lightness}%)`; // Используем HSL для создания градиента цвета
+    }
+  },
+  mounted() {
+    this.fetchResourceStats();
+  },
+  methods: {
+    renderChart() {
+      const marksCanvas = document.getElementById("marksChart");
+
+      this.chart = new Chart(marksCanvas, {
+        type: 'radar',
+        data: this.marksData,
+        options: {
+          plugins: {
+            legend: {
+              display: false
+            }
+          }
+        }
+      });
+    },
+    async fetchResourceStats() {
+      try {
+        const response = await fetch('http://127.0.0.1:8000/api/v1/dashboard/resource_stats/');
+        const data = await response.json();
+        this.selectedResources = data.map(resource => resource.resource_name);
+        // Получаем метки из первого объекта JSON-данных
+        this.marksData.labels = Object.keys(data[0].categories);
+        
+        // Обновляем данные для графика и общую среднюю оценку
+        this.resources = data;
+        this.updateChartData();
+        
+        // Рисуем график
+        this.renderChart();
+        
+      } catch (error) {
+        console.error('Error fetching resource stats:', error);
+      }
+    },
+    updateChartData() {
+      // Очищаем данные о категориях в датасете
+      this.marksData.datasets[0].data = [];
+      
+      // Считаем среднее значение по каждой категории и общую среднюю оценку
+      let totalSum = 0;
+      let totalCount = 0;
+      for (let category in this.resources[0].categories) {
+        let sum = 0;
+        for (let resource of this.resources) {
+          if (this.selectedResources.includes(resource.resource_name)) {
+            sum += resource.categories[category];
+          }
+        }
+        let average = sum / this.selectedResources.length;
+        totalSum += average;
+        totalCount++;
+        this.marksData.datasets[0].data.push(average);
+      }
+      this.overallAverage = totalSum / totalCount;
+      
+      // Перерисовываем график
+      if (this.chart) {
+        this.chart.destroy();
+      }
+      this.renderChart(); // Заново рисуем график с обновленными данными
+    }
+  }
+}
+</script>
+
+<style>
+.lk_region {
+  width: 900px;
+  height: 600px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+}
+.region_info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.region_name {
+  font-weight: 700;
+  font-size: 24px;
+}
+.region_qol {
+  font-weight: 700;
+  font-size: 14px;
+}
+.region_qolInfo {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.region_qolTitle {
+  font-weight: 700;
+  font-size: 28px;
+  color: #4AD991;
+}
+.region_bar{
+  margin-right: 5px;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #D9D9D9;
+}
+.region_bar_activ{
+  width: 50%;
+  height: 15px;
+  border-radius: 5px;
+  transition: width 500ms ease-in-out;
+}
+.region_chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chart_canvas{
+  width: 500px !important;
+  height: 500px !important;
+}
+</style>
