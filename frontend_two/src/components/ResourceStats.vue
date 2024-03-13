@@ -1,34 +1,45 @@
 <template>
-  <div class="lk_region">
-    <div class="region_info">
-      <div class="region_name">
-        Архангельск
+  <main className="mainlk">
+    <div class="lk_region">
+      <div className="lk_close btn" @click="toggleResourceStats()">
+        Close
       </div>
-      <div class="region_qol">
-        <div class="region_qolInfo">
-          <div class="region_bar">
-            <div class="region_bar_activ" :style="{ width: barWidth, backgroundColor: barColor }"></div>
-          </div>
-          <div class="region_qolTitle" :style="{ color: barColor }">{{ overallAverage.toFixed(1) }}</div>
+      <div class="region_info">
+        <div class="region_name">
+          Архангельская область
         </div>
-        <div>Assessment of the quality of life</div>
+        <div class="region_qol">
+          <div class="region_qolInfo">
+            <div class="region_bar">
+              <div class="region_bar_activ" :style="{ width: barWidth, backgroundColor: barColor }"></div>
+            </div>
+            <div class="region_qolTitle" :style="{ color: barColor }">{{ overallAverage.toFixed(1) }}</div>
+          </div>
+          <div>Assessment of the quality of life</div>
+        </div>
+      </div>
+      <div class="region_filters">
+        <div v-for="resource in resources" :key="resource.resource_name">
+          <input type="checkbox" v-model="selectedResources" :value="resource.resource_name" @change="updateChartData" di> {{ resource.resource_name }}
+        </div>
+      </div>
+      <div class="region_chart">
+        <canvas id="marksChart" class="chart_canvas"></canvas>
       </div>
     </div>
-    <div class="region_filters">
-      <div v-for="resource in resources" :key="resource.resource_name">
-        <input type="checkbox" v-model="selectedResources" :value="resource.resource_name" @change="updateChartData" di> {{ resource.resource_name }}
-      </div>
-    </div>
-    <div class="region_chart">
-      <canvas id="marksChart" class="chart_canvas"></canvas>
-    </div>
-  </div>
+  </main>
 </template>
 
 <script>
 import Chart from 'chart.js/auto';
 
 export default {
+  props: {
+    toggleResourceStats: {
+      type: Function,
+      requirements: true,
+    }
+  },
   data() {
     return {
       resources: [],
@@ -131,14 +142,50 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.mainlk {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.34);
+}
+
 .lk_region {
+  position: relative;
   width: 900px;
   height: 600px;
   background: #fff;
   border-radius: 15px;
   padding: 30px;
 }
+.lk_close {
+  font-weight: 500;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.btn {
+    padding: 8px 30px;
+    background: #4880FF;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    border: 0;
+    border-radius: 6px;
+    transition: background 300ms ease-in-out;
+}
+
+.btn:hover {
+    background: #749eff;
+    cursor: pointer;
+}
+
 .region_info{
   display: flex;
   justify-content: space-between;

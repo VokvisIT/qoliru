@@ -1,12 +1,12 @@
 <template>
-  <ResourceStats/>
+  <Dashboard/>
 </template>
 
 <script>
 import ResourceStats from './components/ResourceStats.vue';
-
+import Dashboard from './components/Dashboard.vue';
 export default {
-  components: {ResourceStats},
+  components: {ResourceStats, Dashboard},
   data() {
     return {
       amount: 0,

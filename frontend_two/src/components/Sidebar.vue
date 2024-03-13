@@ -1,0 +1,76 @@
+<template>
+    <div className="sidebar_container">
+        <div className="sidebar">
+            <div className="sidebar_logo flex">
+                <div className="logo">
+                    <router-link to="/component-main"><img src="../assets/img/LightLogo_Light.svg" alt="Доготип"></router-link>
+                </div>
+            </div>
+            <ul class="sidebar_list list-reset">
+                <router-link to="/component-main" active-class="active">
+                    <li className="sidebar_item">
+                        Dashboard
+                    </li>
+                </router-link>
+                <router-link to="/component-map" active-class="active">
+                    <li className="sidebar_item">
+                        Map
+                    </li>
+                </router-link>
+                <router-link to="/component-list" active-class="active">
+                    <li className="sidebar_item">
+                        List
+                    </li>
+                </router-link>
+                <router-link to="/component-about" active-class="active">
+                    <li className="sidebar_item">
+                        About
+                    </li>
+                </router-link>
+            </ul>  
+        </div>
+    </div>
+</template>
+
+<script>
+
+
+</script>
+
+<style scoped>
+.sidebar_container{
+    
+    padding: 24px;
+    width: 240px;
+    height: 100vh;
+    border-right: 1px solid #E8E8E8;
+}
+.sidebar_logo {
+    justify-content: center;
+    margin-bottom: 15px;
+    color: #202224;
+}
+.sidebar_logo .logo {
+    width: 132px;
+}
+.sidebar_list .sidebar_item{
+    width: 100%;
+    padding: 13px;
+    border-radius: 6px;
+    font-family: "Nunito Sans";
+    font-weight: 700;
+
+    background: none;
+    transition: background 200ms ease-in-out;
+}
+.sidebar_list .sidebar_item:hover{
+    background: #4880FF;
+    color: #fff;
+}
+.active{
+    display: block;
+    border-radius: 6px;
+    background: #4880FF;
+    color: #fff !important;
+}
+</style>
