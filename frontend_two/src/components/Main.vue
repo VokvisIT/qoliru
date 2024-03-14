@@ -1,6 +1,6 @@
 <template>
     <div className="main_title">
-    Dashboard
+      {{  $t('dashboard')  }}
     </div>
     <div className="main_wrapper">
       <Stats/>

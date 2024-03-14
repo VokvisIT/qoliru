@@ -86,6 +86,8 @@
 
 <style scoped>
 .stats_wrapper {
+    position: relative;
+    z-index: 1;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 30px;

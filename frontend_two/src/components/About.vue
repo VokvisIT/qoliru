@@ -1,6 +1,6 @@
 <template>
     <div className="about_title">
-      About
+      {{  $t('about')  }}
     </div>
     <div className="about_wrapper flex">
       <div className="about_item">

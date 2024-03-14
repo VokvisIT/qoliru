@@ -1,10 +1,10 @@
 <template>
     <div className="map_title">
-      Map
+      {{  $t('map')  }}
     </div>
     <div className="wrapper">
       <div className="map_wrapper_title">
-        Quality of life in the regions
+        {{  $t('qolir')  }}
       </div>
       <iframe
         src="https://yandex.ru/map-widget/v1/-/CCU5lhT~3D?z=4.5"

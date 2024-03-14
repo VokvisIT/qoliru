@@ -1,11 +1,11 @@
 <template>
     <ResourceStats v-if="showResourceStats" :toggleResourceStats="toggleResourceStats"/>
     <div className="list_title">
-    List
+        {{  $t('list')  }}
     </div>
     <div className="wrapper">
         <div className="list_wrapper_title">
-            Quality of life in the regions
+            {{  $t('qolir')  }}
         </div>
         <div className="list_wrapper_items">
             <div className="head_wrapper_items flex">

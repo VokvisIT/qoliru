@@ -153,6 +153,7 @@ export default {
 <style scoped>
 .mainlk {
   position: absolute;
+  z-index: 10000000;
   top: 0;
   left: 0;
   display: flex;

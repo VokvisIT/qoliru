@@ -9,32 +9,37 @@
             <ul class="sidebar_list list-reset">
                 <router-link to="/component-main" active-class="active">
                     <li className="sidebar_item">
-                        Dashboard
+                        {{  $t('dashboard')  }}
                     </li>
                 </router-link>
                 <router-link to="/component-map" active-class="active">
                     <li className="sidebar_item">
-                        Map
+                        {{  $t('map')  }}
                     </li>
                 </router-link>
                 <router-link to="/component-list" active-class="active">
                     <li className="sidebar_item">
-                        List
+                        {{  $t('list')  }}
                     </li>
                 </router-link>
                 <router-link to="/component-about" active-class="active">
                     <li className="sidebar_item">
-                        About
+                        {{  $t('about')  }}
                     </li>
                 </router-link>
-            </ul>  
+            </ul>
         </div>
     </div>
 </template>
 
 <script>
-
-
+export default{
+    methods: {
+        changeLanguage() {
+        this.$i18n.locale = this.$i18n.locale === 'en' ? 'ru' : 'en'
+        }
+    }
+}
 </script>
 
 <style scoped>
