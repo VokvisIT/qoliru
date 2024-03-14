@@ -111,9 +111,7 @@
     justify-content: space-between;
     padding: 15px;
 }
-.lang_item_title{
-    
-}
+
 .lang_item:hover {
     cursor: pointer;
 }
