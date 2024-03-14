@@ -1,6 +1,6 @@
 <template>
     <div className="header_container flex">
-      <input type="text" placeholder="Введите регион">
+      <input type="text" placeholder="Search region">
     </div>
 </template>
 

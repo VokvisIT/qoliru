@@ -93,7 +93,7 @@
 .stats_item {
     position: relative;
     padding: 16px;
-    width: 260px;
+    width: 300px;
     border-radius: 15px;
     background: #fff;
     box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);

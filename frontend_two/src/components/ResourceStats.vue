@@ -4,28 +4,33 @@
       <div className="lk_close btn" @click="toggleResourceStats()">
         Close
       </div>
-      <div class="region_info">
-        <div class="region_name">
-          Архангельская область
-        </div>
-        <div class="region_qol">
-          <div class="region_qolInfo">
-            <div class="region_bar">
-              <div class="region_bar_activ" :style="{ width: barWidth, backgroundColor: barColor }"></div>
+      <div class="flex" style="justify-content: space-between;">
+        <div>
+          <div class="region_info">
+            <div class="region_name">
+              Архангельская область
             </div>
-            <div class="region_qolTitle" :style="{ color: barColor }">{{ overallAverage.toFixed(1) }}</div>
+            <div class="region_qol">
+              <div class="region_qolInfo">
+                <div class="region_bar">
+                  <div class="region_bar_activ" :style="{ width: barWidth, backgroundColor: barColor }"></div>
+                </div>
+                <div class="region_qolTitle" :style="{ color: barColor }">{{ overallAverage.toFixed(1) }}</div>
+              </div>
+              <div>Assessment of the quality of life</div>
+            </div>
           </div>
-          <div>Assessment of the quality of life</div>
+          <div class="region_filters">
+            <div v-for="resource in resources" :key="resource.resource_name">
+              <input type="checkbox" v-model="selectedResources" :value="resource.resource_name" @change="updateChartData" di> {{ resource.resource_name }}
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="region_filters">
-        <div v-for="resource in resources" :key="resource.resource_name">
-          <input type="checkbox" v-model="selectedResources" :value="resource.resource_name" @change="updateChartData" di> {{ resource.resource_name }}
-        </div>
-      </div>
+      
       <div class="region_chart">
         <canvas id="marksChart" class="chart_canvas"></canvas>
       </div>
+    </div>
     </div>
   </main>
 </template>
@@ -84,6 +89,9 @@ export default {
         type: 'radar',
         data: this.marksData,
         options: {
+          layout: {
+    padding: 0
+  },
           plugins: {
             legend: {
               display: false
@@ -157,8 +165,7 @@ export default {
 
 .lk_region {
   position: relative;
-  width: 900px;
-  height: 600px;
+  width: 1100px;
   background: #fff;
   border-radius: 15px;
   padding: 30px;
@@ -187,7 +194,8 @@ export default {
 }
 
 .region_info{
-  display: flex;
+  /* display: flex; */
+  width: 300px;
   justify-content: space-between;
   margin-bottom: 15px;
 }
@@ -222,13 +230,11 @@ export default {
   border-radius: 5px;
   transition: width 500ms ease-in-out;
 }
-.region_chart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .chart_canvas{
-  width: 500px !important;
-  height: 500px !important;
+
+  width: 700px !important;
+  height: 700px !important;
 }
+
 </style>
