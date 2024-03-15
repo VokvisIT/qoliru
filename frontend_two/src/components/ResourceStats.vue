@@ -18,12 +18,23 @@
                 <div class="region_qolTitle" :style="{ color: barColor }">{{ overallAverage.toFixed(1) }}</div>
               </div>
               <div>Assessment of the quality of life</div>
+              <div>Данных собрано: {{ countData }}</div>
             </div>
           </div>
           <div class="region_filters">
             <div v-for="resource in resources" :key="resource.resource_name">
               <input type="checkbox" v-model="selectedResources" :value="resource.resource_name" @change="updateChartData" di> {{ resource.resource_name }}
             </div>
+          </div>
+          <div class="region_data_filter">
+            <label for="startDate">Start Date:</label>
+            <select v-model="paramsFilter.param1" @change="fetchResourceStats">
+              <option v-for="date in availableDates" :value="date">{{ date }}</option>
+            </select>
+            <label for="endDate">End Date:</label>
+            <select v-model="paramsFilter.param2" @change="fetchResourceStats">
+              <option v-for="date in availableDates" :value="date">{{ date }}</option>
+            </select>
           </div>
         </div>
       
@@ -58,7 +69,14 @@ export default {
           data: [] // пустой массив для данных
         }]
       },
-      overallAverage: 0 // переменная для хранения общего среднего
+      overallAverage: 0, // переменная для хранения общего среднего
+      paramsFilter : {
+        // Ваши параметры здесь, например:
+        param1: '2023-09-01',
+        param2: '2023-12-31'
+      },
+      availableDates: [], // Массив доступных дат
+      countData: null,
     };
   },
   computed: {
@@ -82,6 +100,14 @@ export default {
     this.fetchResourceStats();
   },
   methods: {
+    updateCountData() {
+      this.countData = this.resources.reduce((total, resource) => {
+        if (this.selectedResources.includes(resource.resource_name)) {
+          return total + resource.data_count;
+        }
+        return total;
+      }, 0);
+    },
     renderChart() {
       const marksCanvas = document.getElementById("marksChart");
 
@@ -102,12 +128,12 @@ export default {
     },
     async fetchResourceStats() {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/v1/dashboard/resource_stats/');
+        const response = await fetch(`http://127.0.0.1:8000/api/v1/dashboard/resource_stats/?param1=${this.paramsFilter.param1}&param2=${this.paramsFilter.param2}`);
         const data = await response.json();
         this.selectedResources = data.map(resource => resource.resource_name);
         // Получаем метки из первого объекта JSON-данных
         this.marksData.labels = Object.keys(data[0].categories);
-        
+        console.log(data)
         // Обновляем данные для графика и общую среднюю оценку
         this.resources = data;
         this.updateChartData();
@@ -120,6 +146,7 @@ export default {
       }
     },
     updateChartData() {
+      this.updateCountData();
       // Очищаем данные о категориях в датасете
       this.marksData.datasets[0].data = [];
       
@@ -166,7 +193,7 @@ export default {
 
 .lk_region {
   position: relative;
-  width: 1100px;
+  width: 1400px; /*  Тут хз */
   background: #fff;
   border-radius: 15px;
   padding: 30px;
@@ -231,11 +258,13 @@ export default {
   border-radius: 5px;
   transition: width 500ms ease-in-out;
 }
-
+.region_filters, .region_data_filter {
+  visibility: hidden;
+}
 .chart_canvas{
 
-  width: 700px !important;
-  height: 700px !important;
+  width: 900px !important;
+  height: 900px !important;
 }
 
 </style>

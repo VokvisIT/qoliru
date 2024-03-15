@@ -16,6 +16,7 @@ class ModelDataSerializer(serializers.ModelSerializer):
 class ResourceStatsSerializer(serializers.Serializer):
     resource_name = serializers.CharField()
     categories = serializers.DictField()
+    data_count = serializers.IntegerField()  # Добавляем поле data_count
 
 def calculate_category_ratio(data):
     total_count = data.count()
@@ -37,16 +38,22 @@ def calculate_category_ratio(data):
 
     return categories
 
-def get_resource_stats():
+def get_resource_stats(start_data, end_data):
     resources = ModelData.objects.values_list('Resource_Name', flat=True).distinct()
 
     stats = []
     for resource in resources:
-        data = ModelData.objects.filter(Resource_Name=resource)
+        data = ModelData.objects.filter(Resource_Name=resource, Data__range=[start_data, end_data])
+        data_count = data.count()
+        print(data_count) # Подсчет количества записей
         categories = calculate_category_ratio(data)
         if categories:
             avg_rating = sum(categories.values()) / len(categories)  # Calculate average rating
-            stats.append({'resource_name': resource, 'categories': categories})
+            stats.append({
+                'resource_name': resource,
+                'data_count': data_count,  # Добавление количества записей в результат
+                'categories': categories
+            })
 
     serializer = ResourceStatsSerializer(data=stats, many=True)
     serializer.is_valid(raise_exception=True)

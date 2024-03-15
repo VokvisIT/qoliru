@@ -12,5 +12,7 @@ class DataViewSet(viewsets.ModelViewSet):
 
 class ResourceStatsAPIView(APIView):
     def get(self, request):
-        stats = get_resource_stats()
+        start_date = '2023-08-01'
+        end_date = '2023-12-31'
+        stats = get_resource_stats(start_date, end_date)
         return Response(stats)
