@@ -1,15 +1,17 @@
-# Используем образ Node.js 14
-FROM node:14
+# Используем образ Node.js
+FROM node:20.11.1
 
 # Установка рабочей директории
 WORKDIR /app
 
 # Копирование зависимостей и установка их
-COPY frontend/package*.json ./
+COPY package*.json ./
+
+# Установка зависимостей
 RUN npm install
 
 # Копирование остальных файлов приложения
-COPY frontend .
+COPY . .
 
-# Команда для сборки Vue проекта
-CMD ["npm", "run", "serve"]
+# Сборка приложения и запуск сервера
+CMD ["npm", "run", "dev"]
