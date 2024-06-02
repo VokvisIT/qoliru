@@ -37,12 +37,15 @@ jobs:
     needs: build
 
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
     - name: SSH to VM and deploy
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.VM_HOST }}
         username: ${{ secrets.VM_USER }}
-        password: ${{ secrets.VM_PASSWORD }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-backend:latest
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest
