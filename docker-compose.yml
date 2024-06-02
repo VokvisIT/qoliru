@@ -18,7 +18,7 @@ services:
       dockerfile: Dockerfile
     container_name: frontend
     ports:
-      - "5173:5173"  # Порт по умолчанию для Vite
+      - "8080:8080"  # Порт по умолчанию для Vite
     volumes:
       - ./frontend_two:/app
     command: sh -c "npm install && npm run dev"
