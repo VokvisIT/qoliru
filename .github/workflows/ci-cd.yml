@@ -44,7 +44,7 @@ jobs:
         username: ${{ secrets.VM_USER }}
         password: ${{ secrets.VM_PASSWORD }}
         script: |
-          docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-backend:latest
-          docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest
-          docker-compose -f /qoliru/docker-compose.yml down
-          docker-compose -f /qoliru/docker-compose.yml up -d
+          sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-backend:latest
+          sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest
+          sudo docker-compose -f /qoliru/docker-compose.yml down
+          sudo docker-compose -f /qoliru/docker-compose.yml up -d
