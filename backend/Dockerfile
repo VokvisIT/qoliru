@@ -1,5 +1,5 @@
-# Используем образ Python 3.9
-FROM python:3.9
+# Используем образ Python 3.11
+FROM python:3.11
 
 # Установка рабочей директории
 WORKDIR /app
