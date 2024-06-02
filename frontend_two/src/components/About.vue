@@ -5,7 +5,7 @@
     <div className="about_wrapper flex">
       <div className="about_item">
         <div className="item_title">
-          Rating the category
+          Rating the category F
         </div>
         <div className="item_descr">
           1. Counting the number of opinions (positive, negative and neutral)
