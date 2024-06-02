@@ -29,7 +29,7 @@ jobs:
 
     - name: Build and push frontend Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest ./frontend
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest ./frontend_two
         docker push ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest
 
   deploy:
