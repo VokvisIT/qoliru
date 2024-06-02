@@ -41,12 +41,11 @@ jobs:
       uses: actions/checkout@v2
 
     - name: SSH to VM and deploy
-      uses: x0n/ssh-action@v2.0.0
+      uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.VM_HOST }}
         username: ${{ secrets.VM_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
-        passphrase: ${{ secrets.SSH_PASSPHRASE }}
         script: |
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-backend:latest
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest
