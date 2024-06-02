@@ -2,7 +2,7 @@ import { createI18n } from 'vue-i18n'
 
 const messages = {
   en: {
-    dashboard: 'Dashboard',
+    dashboard: 'Dashboard Test CI/CD',
     map: 'Map',
     list: 'List',
     about: 'About',
