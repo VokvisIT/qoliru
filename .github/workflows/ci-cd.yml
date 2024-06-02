@@ -49,5 +49,5 @@ jobs:
         script: |
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-backend:latest
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest
-          sudo docker-compose -f /qoliru/docker-compose.yml down
-          sudo docker-compose -f /qoliru/docker-compose.yml up -d
+          sudo docker-compose -f /home/tomeo/qoliru/docker-compose.yml down
+          sudo docker-compose -f /home/tomeo/qoliru/docker-compose.yml up -d
