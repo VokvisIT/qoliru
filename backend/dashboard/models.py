@@ -31,3 +31,60 @@ class ModelData(models.Model):
     Positive = models.BooleanField(null=True)
     Negative = models.BooleanField(null=True)
     Neutral = models.BooleanField(null=True)
+
+
+
+class Region(models.Model):
+    """
+    Класс региона (Архангельск, Якутия)
+    """
+    name = models.CharField(max_length=100)
+    subject_code = models.IntegerField(null=True, blank=True)
+    description = models.TextField(null=True, blank=True)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)# Широта
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)# Долгота
+    
+    def __str__(self):
+        return str(self.name)
+
+
+class Source(models.Model):
+    """
+    Источник (VK, Telegramm)
+    """
+    name = models.CharField(max_length=100)
+    description = models.TextField(null=True, blank=True)
+    region = models.ForeignKey(Region, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return str(f'{self.name} + {self.region}')
+
+class Resource(models.Model):
+    """
+    Ресурс парсинга (Арх.Онлайн и т.п.)
+    """
+    name = models.CharField(max_length=100)
+    link = models.CharField(max_length=100)
+    description = models.TextField(null=True, blank=True)
+    source = models.ForeignKey(Source, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return str(self.name)
+
+class ModelDataTest(models.Model):
+    """
+    Тестовая модель для данных
+    """
+    data = models.DateField()
+    time = models.TimeField()
+
+    region = models.ForeignKey(Region, on_delete=models.CASCADE)
+    source = models.ForeignKey(Source, on_delete=models.CASCADE)
+    resource = models.ForeignKey(Resource, on_delete=models.CASCADE)
+
+    text = models.TextField(null=True, blank=True)
+    comment_text = models.TextField(null=True, blank=True)
+    type_text = models.CharField(max_length=100)
+    
+    category = models.CharField(max_length=100)
+    tonality = models.CharField(max_length=100)
