@@ -47,7 +47,17 @@ jobs:
         username: ${{ secrets.VM_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
+          # Remove old backend image
+          sudo docker image rm ${{ secrets.DOCKER_USERNAME }}/myproject-backend:latest || true
+          # Remove old frontend image
+          sudo docker image rm ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest || true
+
+          # Pull updated images
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-backend:latest
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/myproject-frontend:latest
+
+          # Stop and remove running containers
           sudo docker-compose -f /home/tomeo/qoliru/docker-compose.yml down
+
+          # Start new containers
           sudo docker-compose -f /home/tomeo/qoliru/docker-compose.yml up -d
