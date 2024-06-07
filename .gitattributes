@@ -32,3 +32,4 @@ backend/dashboard/model_dl/rubert-tiny2-cedr-emotion-detection/*.safetensors fil
 backend/dashboard/model_dl/rubert-tiny2-cedr-emotion-detection/*.bin filter=lfs diff=lfs merge=lfs -text
 backend/dashboard/model_dl/rubert-tiny2-cedr-emotion-detection/* filter=lfs diff=lfs merge=lfs -text
 backend/dashboard/model_dl/*.pth filter=lfs diff=lfs merge=lfs -text
+backend\dashboard\model_dl\rubert-tiny2-cedr-emotion-detection\* filter=lfs diff=lfs merge=lfs -text
