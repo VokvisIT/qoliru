@@ -51,7 +51,7 @@ def get_prediction_tonality(text, model_name = 'dashboard/model_dl/rubert-tiny2-
     result = map_emotion_to_tonality(predicted_class)
     return result
 
-def get_prediction(text, model_path, weights_path):
+def get_prediction(text, model_path = 'dashboard/model_dl/fine-tune_model_category/', weights_path='dashboard/model_dl/fine-tune-bert_category.pth'):
     # Загрузка токенизатора
     tokenizer = BertTokenizer.from_pretrained(model_path + 'tokenizer_config.json')
 
@@ -233,6 +233,7 @@ def get_vk_wall_posts(token, version, owner_id, end_date, group_name, resource):
         'fields': 'post_type,comments,likes,reposts,views',
         'filter': 'all'
     }
+    last_post_id = None
 
     posts = []
     moscow_tz = pytz.timezone('Europe/Moscow')
@@ -240,7 +241,7 @@ def get_vk_wall_posts(token, version, owner_id, end_date, group_name, resource):
 
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         while True:
-            params['offset'] = len(posts)  # Смещение устанавливается на количество уже полученных постов
+            params['offset'] = last_post_id  # Смещение устанавливается на количество уже полученных постов
             response = requests.get('https://api.vk.com/method/wall.get', params=params)
             data = response.json()
 
@@ -260,6 +261,7 @@ def get_vk_wall_posts(token, version, owner_id, end_date, group_name, resource):
                 post_time = post_date.strftime("%H:%M:%S")
                 if post_date < end_date:
                     last_post_date = None  # Установка значения None для остановки сбора
+                    print("!!!!!!!!!!!!!!!!!!!!!!СБОР ЗАКОНЧЕН!!!!!!!!!!!!!!!!!!")
                     break
 
                 # Предобработка
@@ -324,5 +326,6 @@ def get_vk_wall_posts(token, version, owner_id, end_date, group_name, resource):
                                     category=predicted_class_category,
                                     tonality=predicted_class_tonality)
                                 time.sleep(3)
+                last_post_id = item['id']  # Сохраняем идентификатор последнего обработанного поста
 
         return posts

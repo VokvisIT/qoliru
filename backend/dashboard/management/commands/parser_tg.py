@@ -17,8 +17,8 @@ import csv
 import pandas as pd
 nest_asyncio.apply()
 
-api_id = '22762367'
-api_hash = '9af9f0416416e4b8d3cde1a358c4129f'
+
+
 
 
 POSITIVE_EMOJIS = ['😃', '👍', '❤', '😁', '😊', '🌟', '🎉', '🥰', '😍', '🙌', '🤗', '👏', '🌞', '🌻', '💃', '🕺', '🔥', '✨',
@@ -102,16 +102,7 @@ async def get_message_content(client, msg: Message, url, channel_name, chat):
             reply_text = await clearify_text(msg=reply)
             msg_reply_text = reply_text
 
-    message_data = [
-        msg_url, msg_date, msg_time,
-        msg_source, msg_header, msg_reply_to_text,
-        msg_text, msg_comments_count,
-        msg_rating, msg_positive_reactions_count,
-        msg_negative_reactions_count,
-        msg_forwards, msg_views, msg_comments,
-        msg_comment_reactions, msg_text_type,
-        msg_hashtags, msg_tone, msg_category
-    ]
+    message_data = [msg_date, msg_time, msg_url, msg_source, msg_url, msg_text, msg_text, msg_text_type, "msg_category", "msg_tonality"]
     return message_data
 
 async def find_last_parsed_date(path):
@@ -130,27 +121,32 @@ async def find_last_parsed_date(path):
 async def parse(client, url, limit):
     err = []
     channel_id = await get_channel_id(client, url)
-    oldest = await find_last_parsed_date(channel_id)
     chat = await client.get_chat(url)
+
+    # Получим дату прошедших 3 дней назад
+    yesterday = datetime.datetime.now() - datetime.timedelta(days=30)
+
     # открываем csv файл для записи данных
-    with open(f"{channel_id}.csv", "a", newline="", encoding="utf-8") as f:
+    output_folder = "dashboard/csvdata"
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+    with open(f"{output_folder}/{url}.csv", "a", newline="", encoding="utf-8") as f:
 
         # создаем объект writer для записи данных в csv формате
         writer = csv.writer(f)
-
         # записываем заголовки столбцов
-        writer.writerow(["URL", "Date", "Time",
-                         "Source", "Header", "Reply to",
-                         "Text", "Comments count", "Rating",
-                         "Positive reactions count",
-                         "Negative reactions count",
-                         "Forwards", "Views",
-                         "Comments", "Comment reactions",
-                         "Text type", "Hashtags", "Tone",
-                         "Category"])
+        writer.writerow(["Date", "Time", "Region", "Source", "Resource", "Text", "Comment Text", "Text Type", "Category", "Tonality"])
+
+        current_date = yesterday.date()
 
         async for message in client.get_chat_history(chat.id, offset_id=0, limit=limit):
             message: Message
+            msg_date = f"{message.date.day}.{message.date.month}.{message.date.year}"
+            day, month, year = msg_date.split(".")
+            reordered_date = f"{year}-{month.zfill(2)}-{day.zfill(2)}"
+            msg_date = datetime.datetime.strptime(reordered_date, "%Y-%m-%d").date()
+            if msg_date < current_date:
+                break
             try:
                 # получаем данные по сообщению
                 message_data = await get_message_content(client, message, url, channel_id, chat)
@@ -161,11 +157,17 @@ async def parse(client, url, limit):
             except Exception as passing:
                 err.append(passing)
                 continue
+
     return err
+
+
+
+
+
 
 #@title Парсер {display-mode:"form"}
 
-async def main():
+async def main(url, api_id, api_hash, resource):
     logging.basicConfig(
         level=logging.INFO,
         filename='parser_log.log',
@@ -176,22 +178,21 @@ async def main():
     logging.info("script started")
 
     # url = input("Ссылка или @ канала: ")
-    url = '@arkhangelsk001'  # @param {type:"string"}
+    # url = '@zhest_29_chat'  # @param {type:"string"}
 
     flag = False  # @param {type:"boolean"}
 
-    limit = 1000  # @param {type:"integer"}
+    limit = 10000  # @param {type:"integer"}
 
     logging.info(f"parsing channel {url}")
 
     async with Client("new", api_id, api_hash) as app:
         try:
-            err = await parse(app, url, limit=limit)
+            err = await parse(app, url, limit)
             if err:
                 logging.warning(str(err))
             else:
                 logging.info("parsing done successfully")
-
         except Exception as ex:
             logging.critical(f"critical error {ex}")
             flag = False
@@ -205,4 +206,3 @@ async def main():
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
-
