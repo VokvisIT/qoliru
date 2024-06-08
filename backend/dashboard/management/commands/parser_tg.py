@@ -124,7 +124,7 @@ async def parse(client, url, limit):
     chat = await client.get_chat(url)
 
     # Получим дату прошедших 3 дней назад
-    yesterday = datetime.datetime.now() - datetime.timedelta(days=7)
+    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
 
     # открываем csv файл для записи данных
     output_folder = "dashboard/csvdata"

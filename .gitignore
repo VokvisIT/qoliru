@@ -1,1 +1,7 @@
+model_dl
 venv
+csvdata
+# Ignore new.session file
+new.session
+# Ignore parser_log.log file
+parser_log.log
