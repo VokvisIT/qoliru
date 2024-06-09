@@ -1,18 +1,16 @@
-from rest_framework import viewsets
-from .models import ModelData
-from .serializers import DataSerializer
+# views.py
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import get_resource_stats
+from rest_framework import status
+from .models import Region
+from .serializers import RegionQOLSerializer
 
-class DataViewSet(viewsets.ModelViewSet):
-    queryset = ModelData.objects.all()[10:]
-    serializer_class = DataSerializer
-
-
-class ResourceStatsAPIView(APIView):
+class BestRegionQOLView(APIView):
     def get(self, request):
-        start_date = '2023-08-01'
-        end_date = '2023-12-31'
-        stats = get_resource_stats(start_date, end_date)
-        return Response(stats)
+        regions = Region.objects.all()
+        serializer = RegionQOLSerializer(regions, many=True)
+        sorted_regions = sorted(serializer.data, key=lambda x: x['qol'], reverse=True)
+        
+        if sorted_regions:
+            return Response(sorted_regions[0], status=status.HTTP_200_OK)
+        return Response({"detail": "No data available"}, status=status.HTTP_404_NOT_FOUND)

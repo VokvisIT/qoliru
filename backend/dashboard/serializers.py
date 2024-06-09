@@ -1,67 +1,66 @@
+# serializers.py
 from rest_framework import serializers
-from .models import ModelData
+from .models import Region, ModelDataTest
+from django.db.models import Avg, Count, Q
+import datetime
+class RegionQOLSerializer(serializers.ModelSerializer):
+    qol = serializers.SerializerMethodField()
+    qol_change = serializers.SerializerMethodField()
 
-class DataSerializer(serializers.ModelSerializer):
     class Meta:
-        model = ModelData
-        fields = ('Data', 'Time', 'Resource_Name',)
+        model = Region
+        fields = ['id', 'name', 'qol', 'qol_change']
 
-class ModelDataSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ModelData
-        fields = '__all__'
+    def get_qol(self, obj):
+        return round(self.calculate_qol(obj), 1)
 
-
-
-class ResourceStatsSerializer(serializers.Serializer):
-    resource_name = serializers.CharField()
-    categories = serializers.DictField()
-    data_count = serializers.IntegerField()  # Добавляем поле data_count
-
-def calculate_category_ratio(data):
-    total_count = data.count()
-    if total_count == 0:
-        return {}
-    
-    categories = {}
-
-    category_fields = ModelData._meta.fields[15:27]  # Assuming the boolean fields start from index 13 and end at 26
-
-    for category_field in category_fields:
-        category_name = category_field.name
-        category_count = data.filter(**{category_name: True}).count()
+    def get_qol_change(self, obj):
+        today = datetime.date.today()
+        yesterday = today - datetime.timedelta(days=1)
         
-        if category_count > 0:
-            positive_count = data.filter(**{category_name: True, 'Positive': True}).count()
-            ratio = positive_count / category_count * 10.0  # Calculate ratio
-            categories[category_name] = round(ratio, 1)
+        today_qol = self.calculate_daily_qol(obj, today)
+        yesterday_qol = self.calculate_daily_qol(obj, yesterday)
 
-    return categories
+        return round(today_qol - yesterday_qol, 1)
 
-def get_resource_stats(start_data, end_data):
-    resources = ModelData.objects.values_list('Resource_Name', flat=True).distinct()
+    def calculate_qol(self, obj):
+        data = ModelDataTest.objects.filter(region=obj)
+        categories = data.values('category').annotate(
+            positive_count=Count('id', filter=Q(tonality='1')),
+            neutral_count=Count('id', filter=Q(tonality='0')),
+            negative_count=Count('id', filter=Q(tonality='2')),
+        )
 
-    stats = []
-    for resource in resources:
-        data = ModelData.objects.filter(Resource_Name=resource, Data__range=[start_data, end_data])
-        data_count = data.count()
-        print(data_count) # Подсчет количества записей
-        categories = calculate_category_ratio(data)
-        if categories:
-            avg_rating = sum(categories.values()) / len(categories)  # Calculate average rating
-            stats.append({
-                'resource_name': resource,
-                'data_count': data_count,  # Добавление количества записей в результат
-                'categories': categories
-            })
+        category_qols = []
+        for category in categories:
+            total_count = category['positive_count'] + category['neutral_count'] + category['negative_count']
+            if total_count == 0:
+                continue
+            positive_neutral_ratio = (category['positive_count'] + category['neutral_count']) / total_count
+            qol = positive_neutral_ratio * 10
+            category_qols.append(qol)
 
-    serializer = ResourceStatsSerializer(data=stats, many=True)
-    serializer.is_valid(raise_exception=True)
-    serialized_data = serializer.validated_data
+        if not category_qols:
+            return 0
+        return sum(category_qols) / len(category_qols)
 
-    # Add 'avg' field manually to each serialized dictionary
-    for stat in serialized_data:
-        avg_rating = sum(stat['categories'].values()) / len(stat['categories'])  # Calculate average rating
-        stat['avg'] = round(avg_rating, 1)
+    def calculate_daily_qol(self, obj, date):
+        data = ModelDataTest.objects.filter(region=obj, data=date)
+        categories = data.values('category').annotate(
+            positive_count=Count('id', filter=Q(tonality='1')),
+            neutral_count=Count('id', filter=Q(tonality='0')),
+            negative_count=Count('id', filter=Q(tonality='2')),
+        )
 
-    return serialized_data
+        category_qols = []
+        for category in categories:
+            total_count = category['positive_count'] + category['neutral_count'] + category['negative_count']
+            if total_count == 0:
+                continue
+            positive_neutral_ratio = (category['positive_count'] + category['neutral_count']) / total_count
+            qol = positive_neutral_ratio * 10
+            category_qols.append(qol)
+
+        if not category_qols:
+            return 0
+        return sum(category_qols) / len(category_qols)

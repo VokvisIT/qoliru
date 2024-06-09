@@ -1,23 +1,29 @@
 <template>
     <div className="stats_wrapper flex">
         <div className="stats_item">
-            <div className="stats_item_qol flex">
+            <div v-if="loading" className="loading">
+                <Loader />
+            </div>
+            <div v-else>
+                <div className="stats_item_qol flex">
                 <div className="item_qol">
-                    7.4
+                    {{ bestRegion.qol }}
                 </div>
             </div>
             <div className="stats_descr">
                 The best region
             </div>
             <div className="stats_title">
-                Arkhangelsk
+                {{ bestRegion.name }}
             </div>
             <div className="stats_hist flex">
                 <div className="stats_hist_img"><img src="../assets/img/uparrow.svg" alt=""></div>
                 <div className="stats_hist_text">
-                    1.7 Compared to last quarter
+                    {{ bestRegion.qol_change }} Compared to last quarter Compared to last quarter
                 </div>
             </div>
+            </div>
+            
         </div>
         <div className="stats_item">
             <div className="stats_item_qol flex">
@@ -80,9 +86,40 @@
 </template>
 
 <script>
-
-
+import axios from 'axios'
+import Loader from './Loader.vue'
+export default {
+    components: {
+        Loader
+    },
+  data() {
+    return {
+      bestRegion: {},
+      loading: false
+    }
+  },
+  created() {
+    this.fetchBestRegionQOL()
+  },
+  methods: {
+    fetchBestRegionQOL() {
+        this.loading = true
+        
+        axios.get('backend:8000/api/v1/dashboard/best-region-qol/')
+        .then(response => {
+        this.bestRegion = response.data
+        this.loading = false
+        })
+        .catch(error => {
+        console.error(error)
+        this.loading = false
+        })
+        
+    }
+  }
+}
 </script>
+
 
 <style scoped>
 .stats_wrapper {
@@ -99,6 +136,12 @@
     border-radius: 15px;
     background: #fff;
     box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
+}
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .stats_item_qol {
     width: 60px;
