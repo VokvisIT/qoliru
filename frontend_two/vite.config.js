@@ -6,18 +6,23 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     port: 8080,
-    proxy: {
-      '/api': {
-        target: process.env.VUE_APP_API_URL,
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
   },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  configureServer(server) {
+    const proxy = require('http-proxy-middleware')
+    const { VUE_APP_API_URL } = process.env
+
+    server.middlewares.use(
+      '/api',
+      proxy({
+        target: VUE_APP_API_URL,
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' }
+      })
+    )
   }
 })
-
