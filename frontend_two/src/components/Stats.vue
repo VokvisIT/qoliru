@@ -104,7 +104,8 @@ export default {
   methods: {
     fetchBestRegionQOL() {
         this.loading = true
-        axios.get('${process.env.VUE_APP_API_URL}/api/v1/dashboard/best-region-qol/')
+        const apiUrl = process.env.VUE_APP_API_URL
+        axios.get(`${apiUrl}/api/v1/dashboard/best-region-qol/`)
         .then(response => {
         this.bestRegion = response.data
         this.loading = false
