@@ -17,6 +17,3 @@ class Command(BaseCommand):
             group_id = get_group_id(token, version, resource.link)
             if group_id is not None:
                 get_vk_wall_posts(token, version, group_id, end_date, resource.name, resource)
-                
-
-        
