@@ -103,8 +103,8 @@ export default {
   },
   methods: {
     fetchBestRegionQOL() {
-        axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-region-qol/`)
-        // axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-region-qol/`)
+        // axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-region-qol/`)
+        /axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-region-qol/`)
         .then(response => {
         this.bestRegion = response.data
         this.loading = false
