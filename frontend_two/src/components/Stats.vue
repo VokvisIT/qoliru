@@ -1,86 +1,129 @@
 <template>
     <div className="stats_wrapper flex">
         <div className="stats_item">
-            <div v-if="loading" className="loading">
+            <div v-if="loading_best_region" className="loading">
+                <Loader />
+            </div>
+            <div v-else>
+                <div className="stats_item_qol flex">
+                    <div className="item_qol">
+                        {{ bestRegion.qol }}
+                    </div>
+                </div>
+                <div className="stats_descr">
+                    The best region
+                </div>
+                <div className="stats_title">
+                    {{ bestRegion.name }}
+                </div>
+                <div className="stats_hist flex">
+                    <div v-if="bestRegion.qol_change > 0">
+                        <div className="stats_hist_img"><img src="../assets/img/uparrow.svg" alt=""></div>
+                    </div>
+                    <div v-else>
+                        <div className="stats_hist_img"><img src="../assets/img/downarrow.svg" alt=""></div>
+                    </div>
+                    <div className="stats_hist_text">
+                        {{ bestRegion.qol_change }} По сравнению с прошлым днём
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className="stats_item">
+            <div v-if="loading_best_category" className="loading">
+                <Loader />
+            </div>
+            <div v-else>
+                <div className="stats_item_qol flex">
+                    <div className="item_qol">
+                        {{ bestCategory.qol }}
+                    </div>
+                </div>
+                <div className="stats_descr">
+                    The best category
+                    <p>
+                        {{ bestCategory.name }}
+                    </p>
+                </div>
+                <div className="stats_title">
+                    {{ bestCategory.category_name }}
+                </div>
+                <div className="stats_hist flex">
+                    <div v-if="bestCategory.qol_change > 0">
+                        <div className="stats_hist_img"><img src="../assets/img/uparrow.svg" alt=""></div>
+                    </div>
+                    <div v-else>
+                        <div className="stats_hist_img"><img src="../assets/img/downarrow.svg" alt=""></div>
+                    </div>
+                    <div className="stats_hist_text">
+                        {{ bestCategory.qol_change }} По сравнению с прошлым днём
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="stats_item">
+            <div v-if="loading_worst_category" className="loading">
                 <Loader />
             </div>
             <div v-else>
                 <div className="stats_item_qol flex">
                 <div className="item_qol">
-                    {{ bestRegion.qol }}
+                    {{ worstCategory.qol }}
+                </div>
+                </div>
+                <div className="stats_descr">
+                    The worst category
+                    <p>
+                        {{ worstCategory.name }}
+                    </p>
+                </div>
+                <div className="stats_title">
+                    {{ worstCategory.category_name }}
+                </div>
+                <div className="stats_hist flex">
+                    <div v-if="worstCategory.qol_change > 0">
+                        <div className="stats_hist_img"><img src="../assets/img/uparrow.svg" alt=""></div>
+                    </div>
+                    <div v-else>
+                        <div className="stats_hist_img"><img src="../assets/img/downarrow.svg" alt=""></div>
+                    </div>
+                    <div className="stats_hist_text">
+                        {{ worstCategory.qol_change }} По сравнению с прошлым днём
+                    </div>
                 </div>
             </div>
-            <div className="stats_descr">
-                The best region
+        </div>
+
+        <div className="stats_item">
+            <div v-if="loading_count_data" className="loading">
+                <Loader />
             </div>
-            <div className="stats_title">
-                {{ bestRegion.name }}
-            </div>
-            <div className="stats_hist flex">
-                <div className="stats_hist_img"><img src="../assets/img/uparrow.svg" alt=""></div>
-                <div className="stats_hist_text">
-                    {{ bestRegion.qol_change }} Compared to last quarter Compared to last quarter
+            <div v-else>
+                <div className="stats_item_qol flex">
+                    <div className="item_qol">
+                        <img src="../assets/img/Subtract.svg" alt="">
+                    </div>
                 </div>
-            </div>
+                <div className="stats_descr">
+                    Data collected
+                </div>
+                <div className="stats_title">
+                    {{ dataCount.count_yesterday }}
+                </div>
+                <div className="stats_hist flex">
+                    <div v-if="dataCount.count_difference > 0">
+                        <div className="stats_hist_img"><img src="../assets/img/uparrow.svg" alt=""></div>
+                    </div>
+                    <div v-else>
+                        <div className="stats_hist_img"><img src="../assets/img/downarrow.svg" alt=""></div>
+                    </div>
+                    <div className="stats_hist_text">
+                        {{ dataCount.count_difference }} По сравнению с прошлым днём
+                    </div>
+                </div>
             </div>
             
-        </div>
-        <div className="stats_item">
-            <div className="stats_item_qol flex">
-                <div className="item_qol">
-                    7.4
-                </div>
-            </div>
-            <div className="stats_descr">
-                The best category
-            </div>
-            <div className="stats_title">
-                Safety
-            </div>
-            <div className="stats_hist flex">
-                <div className="stats_hist_img"><img src="../assets/img/uparrow.svg" alt=""></div>
-                <div className="stats_hist_text">
-                    1.2 Compared to last quarter
-                </div>
-            </div>
-        </div>
-        <div className="stats_item">
-            <div className="stats_item_qol flex">
-                <div className="item_qol">
-                    1.5
-                </div>
-            </div>
-            <div className="stats_descr">
-                The worst category
-            </div>
-            <div className="stats_title">
-                Tourism
-            </div>
-            <div className="stats_hist flex">
-                <div className="stats_hist_img"><img src="../assets/img/downarrow.svg" alt=""></div>
-                <div className="stats_hist_text">
-                    0.3 Compared to last quarter
-                </div>
-            </div>
-        </div>
-        <div className="stats_item">
-            <div className="stats_item_qol flex">
-                <div className="item_qol">
-                    <img src="../assets/img/Subtract.svg" alt="">
-                </div>
-            </div>
-            <div className="stats_descr">
-                Data collected
-            </div>
-            <div className="stats_title">
-                2040
-            </div>
-            <div className="stats_hist flex">
-                <div className="stats_hist_img"><img src="../assets/img/uparrow.svg" alt=""></div>
-                <div className="stats_hist_text">
-                    1058 Compared to last quarter
-                </div>
-            </div>
         </div>
     </div>
 </template>
@@ -95,25 +138,69 @@ export default {
   data() {
     return {
       bestRegion: {},
-      loading: true
+      bestCategory: {},
+      worstCategory: {},
+      dataCount: {},
+      loading_best_region: true,
+      loading_best_category: true,
+      loading_worst_category: true,
+      loading_count_data: true,
     }
   },
   created() {
     this.fetchBestRegionQOL()
+    this.fetchBestCategoryQOL()
+    this.fetchWorstCategoryQOL()
+    this.fetchDataCount()
   },
   methods: {
     fetchBestRegionQOL() {
-        // axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-region-qol/`)
+        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-region-qol/`)
         axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-region-qol/`)
         .then(response => {
         this.bestRegion = response.data
-        this.loading = false
+        this.loading_best_region = false
         })
         .catch(error => {
         console.error(error)
-        this.loading = false
+        this.loading_best_region = false
         })
-        
+    },
+    fetchBestCategoryQOL(){
+        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-category-qol/`)
+        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-category-qol/`)
+        .then(response => {
+        this.bestCategory = response.data
+        this.loading_best_category = false
+        })
+        .catch(error => {
+        console.error(error)
+        this.loading_best_category = false
+        })
+    },
+    fetchWorstCategoryQOL() {
+        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/worst-category-qol/`)
+        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-category-qol/`)
+        .then(response => {
+        this.worstCategory = response.data
+        this.loading_worst_category = false
+        })
+        .catch(error => {
+        console.error(error)
+        this.loading_worst_category = false
+        })
+    },
+    fetchDataCount() {
+        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/data-count-yesterday/`)
+        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/data-count-yesterday/`)
+        .then(response => {
+        this.dataCount = response.data
+        this.loading_count_data = false
+        })
+        .catch(error => {
+        console.error(error)
+        this.loading_count_data = false
+        })
     }
   }
 }
@@ -163,6 +250,7 @@ export default {
     font-weight: 500;
 }
 .stats_title {
+    width: 190px;
     margin-bottom: 12px;
     font-size: 28px;
     font-weight: 700;
