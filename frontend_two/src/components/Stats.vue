@@ -216,6 +216,7 @@ export default {
     margin-bottom: 30px;
 }
 .stats_item {
+    height: fit-content;
     position: relative;
     padding: 16px;
     width: 300px;
