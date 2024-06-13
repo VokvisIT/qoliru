@@ -180,7 +180,7 @@ export default {
     },
     fetchWorstCategoryQOL() {
         //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/worst-category-qol/`)
-        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-category-qol/`)
+        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/worst-category-qol/`)
         .then(response => {
         this.worstCategory = response.data
         this.loading_worst_category = false
