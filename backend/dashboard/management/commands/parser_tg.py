@@ -118,7 +118,7 @@ async def find_last_parsed_date(path):
         oldest = datetime.datetime.now() - relativedelta(months=3)
     return oldest
 
-async def parse(client, url, limit):
+async def parse(client, url, limit, last_post_date, last_post_time):
     err = []
     channel_id = await get_channel_id(client, url)
     chat = await client.get_chat(url)
@@ -145,7 +145,8 @@ async def parse(client, url, limit):
             day, month, year = msg_date.split(".")
             reordered_date = f"{year}-{month.zfill(2)}-{day.zfill(2)}"
             msg_date = datetime.datetime.strptime(reordered_date, "%Y-%m-%d").date()
-            if msg_date < current_date:
+            msg_time = message.date.time()
+            if msg_date < last_post_date or (msg_date == last_post_date and msg_time <= last_post_time):
                 break
             try:
                 # получаем данные по сообщению
@@ -167,7 +168,7 @@ async def parse(client, url, limit):
 
 #@title Парсер {display-mode:"form"}
 
-async def main(url, api_id, api_hash, resource):
+async def main(url, api_id, api_hash, resource, last_post_date, last_post_time):
     logging.basicConfig(
         level=logging.INFO,
         filename='parser_log.log',
@@ -188,7 +189,7 @@ async def main(url, api_id, api_hash, resource):
 
     async with Client("new", api_id, api_hash) as app:
         try:
-            err = await parse(app, url, limit)
+            err = await parse(app, url, limit, last_post_date, last_post_time)
             if err:
                 logging.warning(str(err))
             else:

@@ -259,7 +259,8 @@ def get_vk_wall_posts(token, version, owner_id, end_date, group_name, resource):
                 post_text = str(item['text'])
                 post_date = datetime.fromtimestamp(item['date'], moscow_tz)
                 post_time = post_date.strftime("%H:%M:%S")
-                if post_date < end_date:
+
+                if post_date.date() < last_post_date.date() or (post_date.date() == last_post_date.date() and post_time <= last_post_date.time().strftime("%H:%M:%S")):
                     last_post_date = None  # Установка значения None для остановки сбора
                     print("!!!!!!!!!!!!!!!!!!!!!!СБОР ЗАКОНЧЕН!!!!!!!!!!!!!!!!!!")
                     break

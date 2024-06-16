@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div className="stats_descr">
-                    The best region
+                    {{  $t('bestregion')  }}
                 </div>
                 <div className="stats_title">
                     {{ bestRegion.name }}
@@ -24,7 +24,7 @@
                         <div className="stats_hist_img"><img src="../assets/img/downarrow.svg" alt=""></div>
                     </div>
                     <div className="stats_hist_text">
-                        {{ bestRegion.qol_change }} По сравнению с прошлым днём
+                        {{ bestRegion.qol_change }} {{  $t('comparison')  }}
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div className="stats_descr">
-                    The best category
+                    {{  $t('bestcategory')  }}
                     <p>
                         {{ bestCategory.name }}
                     </p>
@@ -56,7 +56,7 @@
                         <div className="stats_hist_img"><img src="../assets/img/downarrow.svg" alt=""></div>
                     </div>
                     <div className="stats_hist_text">
-                        {{ bestCategory.qol_change }} По сравнению с прошлым днём
+                        {{ bestCategory.qol_change }} {{  $t('comparison')  }}
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                 </div>
                 </div>
                 <div className="stats_descr">
-                    The worst category
+                    {{  $t('worstcategory')  }}
                     <p>
                         {{ worstCategory.name }}
                     </p>
@@ -89,7 +89,7 @@
                         <div className="stats_hist_img"><img src="../assets/img/downarrow.svg" alt=""></div>
                     </div>
                     <div className="stats_hist_text">
-                        {{ worstCategory.qol_change }} По сравнению с прошлым днём
+                        {{ worstCategory.qol_change }} {{  $t('comparison')  }}
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div className="stats_descr">
-                    Data collected
+                    {{  $t('datacollected')  }}
                 </div>
                 <div className="stats_title">
                     {{ dataCount.count_yesterday }}
@@ -119,7 +119,7 @@
                         <div className="stats_hist_img"><img src="../assets/img/downarrow.svg" alt=""></div>
                     </div>
                     <div className="stats_hist_text">
-                        {{ dataCount.count_difference }} По сравнению с прошлым днём
+                        {{ dataCount.count_difference }} {{  $t('comparison')  }}
                     </div>
                 </div>
             </div>
@@ -155,8 +155,8 @@ export default {
   },
   methods: {
     fetchBestRegionQOL() {
-        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-region-qol/`)
-        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-region-qol/`)
+        axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-region-qol/`)
+        //axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-region-qol/`)
         .then(response => {
         this.bestRegion = response.data
         this.loading_best_region = false
@@ -167,8 +167,8 @@ export default {
         })
     },
     fetchBestCategoryQOL(){
-        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-category-qol/`)
-        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-category-qol/`)
+        axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-category-qol/`)
+        //axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-category-qol/`)
         .then(response => {
         this.bestCategory = response.data
         this.loading_best_category = false
@@ -179,8 +179,8 @@ export default {
         })
     },
     fetchWorstCategoryQOL() {
-        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/worst-category-qol/`)
-        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/worst-category-qol/`)
+        axios.get(`http://127.0.0.1:8000/api/v1/dashboard/worst-category-qol/`)
+        //axios.get(`http://87.242.86.194:8000/api/v1/dashboard/worst-category-qol/`)
         .then(response => {
         this.worstCategory = response.data
         this.loading_worst_category = false
@@ -191,8 +191,8 @@ export default {
         })
     },
     fetchDataCount() {
-        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/data-count-yesterday/`)
-        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/data-count-yesterday/`)
+        axios.get(`http://127.0.0.1:8000/api/v1/dashboard/data-count-yesterday/`)
+        //axios.get(`http://87.242.86.194:8000/api/v1/dashboard/data-count-yesterday/`)
         .then(response => {
         this.dataCount = response.data
         this.loading_count_data = false

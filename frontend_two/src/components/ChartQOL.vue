@@ -1,7 +1,7 @@
 <template>
     <div className="chart_wrapper">
         <div className="chart_title">
-            Assessment of the quality of life
+          {{  $t('avgregionqol')  }}
         </div>
         <canvas id="myChart" width="1078" height="300"></canvas>
     </div>

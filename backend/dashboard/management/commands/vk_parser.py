@@ -4,7 +4,16 @@ from .parser_vk import get_vk_wall_posts, get_group_id
 from datetime import datetime, timedelta
 import pytz
 from tqdm import tqdm
+from django.utils import timezone
 
+def get_last_post_date(resource):
+    try:
+        last_post = ModelDataTest.objects.filter(resource=resource, source__name='Telegram').latest('data', 'time')
+        last_post_date = timezone.make_aware(timezone.datetime.combine(last_post.data, last_post.time), timezone.get_current_timezone())
+        return last_post_date
+    except ModelDataTest.DoesNotExist:
+        print(f"No posts found for resource {resource.name}.")
+        return None
 class Command(BaseCommand):
     help = 'Parse VK data for the last day'
 
@@ -16,4 +25,7 @@ class Command(BaseCommand):
         for resource in resources:
             group_id = get_group_id(token, version, resource.link)
             if group_id is not None:
-                get_vk_wall_posts(token, version, group_id, end_date, resource.name, resource)
+                last_post = ModelDataTest.objects.filter(resource=resource, source__name='ВКонтакте').latest('data', 'time')
+                moscow_tz = pytz.timezone('Europe/Moscow')
+                last_post_date = moscow_tz.localize(datetime.combine(last_post.data, last_post.time))
+                get_vk_wall_posts(token, version, group_id, last_post_date, resource.name, resource)

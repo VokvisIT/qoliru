@@ -1,6 +1,6 @@
 <template>
     <div class="header_container flex">
-      <input type="text" placeholder="Search region">
+      <input type="text" :placeholder="$t('searchregion')">
       <div class="header_language">
         <div className="lang_wrap flex" @click="toggleLanguageMenu()" v-if="this.$i18n.locale=='ru'">
             <img src="../assets/img/ru-04.svg" alt="" className="lang_img"/>
