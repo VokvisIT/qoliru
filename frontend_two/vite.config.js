@@ -17,6 +17,6 @@ export default defineConfig({
     }
   },
   define: {
-    'import.meta.env.BASE_URL': JSON.stringify('http://127.0.0.1:8000')
+    'import.meta.env.BASE_URL': JSON.stringify('http://87.242.86.194:8000')
   }
 })

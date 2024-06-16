@@ -4,6 +4,7 @@ from .models import Region, ModelDataTest
 from django.db.models import  Count, Q
 import datetime
 
+
 class RegionQOLSerializer(serializers.ModelSerializer):
     qol = serializers.SerializerMethodField()
     qol_change = serializers.SerializerMethodField()
