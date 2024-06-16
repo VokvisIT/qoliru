@@ -3,7 +3,6 @@ from rest_framework import serializers
 from .models import Region, ModelDataTest
 from django.db.models import  Count, Q
 import datetime
-import locale
 
 class RegionQOLSerializer(serializers.ModelSerializer):
     qol = serializers.SerializerMethodField()
@@ -183,7 +182,6 @@ class AvgRegionQOLSerializer(serializers.ModelSerializer):
     data = serializers.ListField(child=serializers.FloatField())
 
     def to_representation(self, instance):
-        locale.setlocale(locale.LC_TIME, 'ru_RU')
         labels = []
         data = []
 
