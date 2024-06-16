@@ -15,5 +15,8 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  define: {
+    'import.meta.env.BASE_URL': JSON.stringify('http://87.242.86.194:8000/')
   }
 })

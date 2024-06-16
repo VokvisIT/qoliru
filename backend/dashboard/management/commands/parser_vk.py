@@ -220,7 +220,7 @@ def get_comment_replies(token, version, owner_id, comment_id):
     replies = data['response']['items']
     return replies
 
-def get_vk_wall_posts(token, version, owner_id, end_date, group_name, resource):
+def get_vk_wall_posts(token, version, owner_id, end_date,last_post_time, group_name, resource):
     print(f"Starting data collection for group: {group_name}")
     path_category = 'dashboard/model_dl/fine-tune_model_category/'
     path_category_weights = 'dashboard/model_dl/fine-tune-bert_category.pth'
@@ -238,7 +238,7 @@ def get_vk_wall_posts(token, version, owner_id, end_date, group_name, resource):
     posts = []
     moscow_tz = pytz.timezone('Europe/Moscow')
     last_post_date = end_date
-
+    last_post_time = last_post_time
     with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
         while True:
             params['offset'] = last_post_id  # Смещение устанавливается на количество уже полученных постов
@@ -260,7 +260,7 @@ def get_vk_wall_posts(token, version, owner_id, end_date, group_name, resource):
                 post_date = datetime.fromtimestamp(item['date'], moscow_tz)
                 post_time = post_date.strftime("%H:%M:%S")
 
-                if post_date.date() < last_post_date.date() or (post_date.date() == last_post_date.date() and post_time <= last_post_date.time().strftime("%H:%M:%S")):
+                if post_date.date() < last_post_date or (post_date.date() == last_post_date and datetime.strptime(post_time, '%H:%M:%S').time() <= last_post_time):
                     last_post_date = None  # Установка значения None для остановки сбора
                     print("!!!!!!!!!!!!!!!!!!!!!!СБОР ЗАКОНЧЕН!!!!!!!!!!!!!!!!!!")
                     break

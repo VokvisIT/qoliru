@@ -25,7 +25,11 @@ class Command(BaseCommand):
         for resource in resources:
             group_id = get_group_id(token, version, resource.link)
             if group_id is not None:
-                last_post = ModelDataTest.objects.filter(resource=resource, source__name='ВКонтакте').latest('data', 'time')
-                moscow_tz = pytz.timezone('Europe/Moscow')
-                last_post_date = moscow_tz.localize(datetime.combine(last_post.data, last_post.time))
-                get_vk_wall_posts(token, version, group_id, last_post_date, resource.name, resource)
+                last_post = ModelDataTest.objects.filter(resource=resource, source__name='ВКонтакте').order_by('-data', '-time').first()
+                if last_post is not None:
+                    last_post_date = last_post.data
+                    last_post_time = last_post.time
+                    print(f'Последний пост у {resource.name} был {last_post_date} в {last_post_time}')
+                    get_vk_wall_posts(token, version, group_id, last_post_date,last_post_time, resource.name, resource)
+                else:
+                    print("No posts found for this resource.")

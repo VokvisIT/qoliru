@@ -3,7 +3,7 @@ from rest_framework import serializers
 from .models import Region, ModelDataTest
 from django.db.models import  Count, Q
 import datetime
-
+import locale
 
 class RegionQOLSerializer(serializers.ModelSerializer):
     qol = serializers.SerializerMethodField()
@@ -68,9 +68,19 @@ class RegionQOLSerializer(serializers.ModelSerializer):
         return sum(category_qols) / len(category_qols)
     
 CATEGORY_MAPPING = {
-    '0': 'Healthcare', '1': 'Housing_and_Public_Utilities', '2': 'Education', '3': 'Infrastructure',
-    '4': 'Culture', '5': 'Environmental Conditions', '6': 'Social_Security', '7': 'Politics',
-    '8': 'Safety', '9': 'Availability_of_Goods_and_Services', '10': 'Official Statements', '11': 'Tourism', '12': 'Facts'
+    '0': 'Здравоохранение',
+    '1': 'ЖКХ',
+    '2': 'Образование',
+    '3': 'Инфраструктура',
+    '4': 'Культура',
+    '5': 'Экологические условия',
+    '6': 'Социальная защита',
+    '7': 'Политика',
+    '8': 'Безопасность',
+    '9': 'Доступность товаров и услуг',
+    '10': 'Официальные заявления',
+    '11': 'Туризм',
+    '12': 'Факты'
 }
 
 class BestCategoryQOLSerializer(serializers.ModelSerializer):
@@ -142,3 +152,48 @@ class WorstCategoryQOLSerializer(serializers.ModelSerializer):
 
         positive_neutral_ratio = (positive_count + neutral_count) / total_count
         return round(positive_neutral_ratio * 10, 1)
+
+def get_avg_qol(date):
+    '''
+    Функция, которая возвращает среднее значения качества жизни всех регионов в определённую дату
+    '''
+    data = ModelDataTest.objects.filter(data=date)
+    categories = data.values('category').annotate(
+        positive_count=Count('id', filter=Q(tonality='1')),
+        neutral_count=Count('id', filter=Q(tonality='0')),
+        negative_count=Count('id', filter=Q(tonality='2')),
+    )
+
+    category_qols = []
+    for category in categories:
+        total_count = category['positive_count'] + category['neutral_count'] + category['negative_count']
+        if total_count == 0:
+            continue
+        positive_neutral_ratio = (category['positive_count'] + category['neutral_count']) / total_count
+        qol = positive_neutral_ratio * 10
+        category_qols.append(qol)
+
+    if not category_qols:
+        return 0
+    return round(sum(category_qols) / len(category_qols), 1)
+
+
+class AvgRegionQOLSerializer(serializers.ModelSerializer):
+    labels = serializers.ListField(child=serializers.DateField())
+    data = serializers.ListField(child=serializers.FloatField())
+
+    def to_representation(self, instance):
+        locale.setlocale(locale.LC_TIME, 'ru_RU')
+        labels = []
+        data = []
+
+        # Получаем все даты, когда были посты
+        dates = ModelDataTest.objects.values_list('data', flat=True).distinct().order_by('data')
+
+        for date in dates:
+            qol = get_avg_qol(date)
+            labels.append(date.strftime('%B %d'))  # измененный формат даты
+            data.append(qol)
+
+        return {'labels': labels, 'data': data}
+    

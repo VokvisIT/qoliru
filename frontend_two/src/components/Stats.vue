@@ -155,8 +155,7 @@ export default {
   },
   methods: {
     fetchBestRegionQOL() {
-        // axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-region-qol/`)
-        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-region-qol/`)
+        axios.get(`${import.meta.env.BASE_URL}/api/v1/dashboard/best-region-qol/`)
         .then(response => {
         this.bestRegion = response.data
         this.loading_best_region = false
@@ -167,8 +166,7 @@ export default {
         })
     },
     fetchBestCategoryQOL(){
-        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/best-category-qol/`)
-        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/best-category-qol/`)
+        axios.get(`${import.meta.env.BASE_URL}/api/v1/dashboard/best-category-qol/`)
         .then(response => {
         this.bestCategory = response.data
         this.loading_best_category = false
@@ -179,8 +177,7 @@ export default {
         })
     },
     fetchWorstCategoryQOL() {
-        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/worst-category-qol/`)
-        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/worst-category-qol/`)
+        axios.get(`${import.meta.env.BASE_URL}/api/v1/dashboard/worst-category-qol/`)
         .then(response => {
         this.worstCategory = response.data
         this.loading_worst_category = false
@@ -191,8 +188,7 @@ export default {
         })
     },
     fetchDataCount() {
-        //axios.get(`http://127.0.0.1:8000/api/v1/dashboard/data-count-yesterday/`)
-        axios.get(`http://87.242.86.194:8000/api/v1/dashboard/data-count-yesterday/`)
+        axios.get(`${import.meta.env.BASE_URL}/api/v1/dashboard/data-count-yesterday/`)
         .then(response => {
         this.dataCount = response.data
         this.loading_count_data = false

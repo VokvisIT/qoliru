@@ -1,26 +1,37 @@
 <template>
     <div className="chart_wrapper">
-        <div className="chart_title">
+      <div className="chart_title">
           {{  $t('avgregionqol')  }}
         </div>
+      <div v-if="loading" className="loading">
+        <Loader />
+      </div>
+      <div>
         <canvas id="myChart" width="1078" height="300"></canvas>
+      </div>
     </div>
 </template>
 
 <script>
 import Chart from 'chart.js/auto';
 import plugin from "chartjs-plugin-gradient";
-
+import axios from 'axios';
+import Loader from './Loader.vue'
 Chart.register(plugin);
+
 export default {
+  components: {
+        Loader
+    },
   data() {
     return {
+      loading: true,
       dataChart: {
-        labels: ['2022 Jan', '2022 Feb', '2022 Mar', '2022 Apr', '2022 May', '2022 Jun', '2022 Jul', '2022 Aug', '2022 Sep', '2022 Oct', '2022 Nov', '2022 Dec','2023 Jan', '2023 Feb', '2023 Mar', '2023 Apr', '2023 May', '2023 Jun', '2023 Jul', '2023 Aug', '2023 Sep', '2023 Oct', '2023 Nov', '2023 Dec'],
+        labels: null,
         datasets: [
           {
             label: 'QOL in Russia',
-            data: [5.6, 3.8, 7.2, 9.3, 2.9, 4.1, 6.7, 8.4, 1.5, 0.8, 9.6, 3.2, 5.6, 3.8, 7.2, 9.3, 2.9, 4.1, 6.7, 8.4, 1.5, 0.8, 9.6, 3.2],
+            data: null,
             borderColor: '#4379EE',
             backgroundColor: 'rgba(67, 121, 238, 0.5)',
             borderWidth: 1.5,
@@ -41,9 +52,8 @@ export default {
       chart: null,
     };
   },
-  mounted() {
-    console.log('Component mounted!');
-    this.renderChart();
+  created(){
+    this.fetchAVGRegionQOL()
   },
   methods: {
     renderChart() {
@@ -52,6 +62,7 @@ export default {
         type: 'line',
         data: this.dataChart,
         options: {
+
           plugins: {
             legend: {
               display: false,
@@ -59,6 +70,7 @@ export default {
           },
           scales: {
             y: {
+              // beginAtZero: true,
               ticks: {
                 stepSize: 2,
               },
@@ -100,17 +112,37 @@ export default {
         },
       });
     },
+    fetchAVGRegionQOL(){
+      axios.get(`${import.meta.env.BASE_URL}/api/v1/dashboard/avg-qoliru/`)
+        .then(response => {
+          this.dataChart.labels = response.data.labels
+          this.dataChart.datasets[0].data = response.data.data
+          this.loading = false;
+          this.renderChart();
+        })
+        .catch(error => {
+        console.error(error)
+        this.loading = false;
+        this.renderChart();
+        })
+    }
   },
 };
 </script>
 
 <style scoped>
 .chart_wrapper {
+  position: relative;
     width: 100%;
     padding: 32px;
     border-radius: 15px;
     background: #fff;
     box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  right: 50%;
 }
 .chart_title {
     font-size: 24px;

@@ -1,11 +1,12 @@
 # views.py
+from datetime import time
 from django.db.models import  Count, Q
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from django.utils import timezone
 from .models import ModelDataTest, Region
-from .serializers import BestCategoryQOLSerializer, RegionQOLSerializer, WorstCategoryQOLSerializer
+from .serializers import AvgRegionQOLSerializer, BestCategoryQOLSerializer, RegionQOLSerializer, WorstCategoryQOLSerializer
 
 class BestRegionQOLView(APIView):
     def get(self, request):
@@ -94,3 +95,8 @@ class DataCountYesterdayView(APIView):
         }
         
         return Response(response_data, status=status.HTTP_200_OK)
+    
+class AVGRegionQOLView(APIView):
+    def get(self, request):
+        serializer = AvgRegionQOLSerializer(ModelDataTest.objects.all())
+        return Response(serializer.data)
