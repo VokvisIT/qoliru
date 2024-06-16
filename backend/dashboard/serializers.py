@@ -8,10 +8,12 @@ import datetime
 class RegionQOLSerializer(serializers.ModelSerializer):
     qol = serializers.SerializerMethodField()
     qol_change = serializers.SerializerMethodField()
+    longitude = serializers.SerializerMethodField()
+    latitude = serializers.SerializerMethodField()
 
     class Meta:
         model = Region
-        fields = ['id', 'name', 'qol', 'qol_change']
+        fields = ['id', 'name', 'qol', 'qol_change', 'longitude', 'latitude']
 
     def get_qol(self, obj):
         return round(self.calculate_qol(obj), 1)
@@ -66,6 +68,11 @@ class RegionQOLSerializer(serializers.ModelSerializer):
         if not category_qols:
             return 0
         return sum(category_qols) / len(category_qols)
+    def get_longitude(self, obj):
+        return obj.longitude
+
+    def get_latitude(self, obj):
+        return obj.latitude
     
 CATEGORY_MAPPING = {
     '0': 'Здравоохранение',
@@ -88,7 +95,7 @@ class BestCategoryQOLSerializer(serializers.ModelSerializer):
     category_name = serializers.SerializerMethodField()
     qol = serializers.FloatField()
     qol_change = serializers.SerializerMethodField()
-
+    
     class Meta:
         model = ModelDataTest
         fields = ['id', 'name', 'category_name', 'qol', 'qol_change']

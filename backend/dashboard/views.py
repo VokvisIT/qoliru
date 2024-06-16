@@ -18,6 +18,16 @@ class BestRegionQOLView(APIView):
             return Response(sorted_regions[0], status=status.HTTP_200_OK)
         return Response({"detail": "No data available"}, status=status.HTTP_404_NOT_FOUND)
 
+class MapRegionQOLView(APIView):
+    def get(self, request):
+        regions = Region.objects.all()
+        serializer = RegionQOLSerializer(regions, many=True)
+        sorted_regions = sorted(serializer.data, key=lambda x: x['qol'], reverse=True)
+        
+        if sorted_regions:
+            return Response(sorted_regions, status=status.HTTP_200_OK)
+        return Response({"detail": "No data available"}, status=status.HTTP_404_NOT_FOUND)
+
 class BestCategoryQOLView(APIView):
     def get(self, request):
         data = ModelDataTest.objects.values('region', 'category').annotate(
