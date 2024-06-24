@@ -4,40 +4,27 @@
       <div className="lk_close btn" @click="toggleResourceStats()">
         Close
       </div>
-      <div class="flex" style="justify-content: space-between;">
-        <div>
+      <div>
+        <div v-if="loading" class="loading">
+          <Loader/>
+        </div>
+        <div v-else>
           <div class="region_info">
             <div class="region_name">
-              Архангельская область
+              {{resources.name}}
             </div>
             <div class="region_qol">
               <div class="region_qolInfo">
                 <div class="region_bar">
-                  <div class="region_bar_activ" :style="{ width: barWidth, backgroundColor: barColor }"></div>
+                  <div class="region_bar_activ" :style="{ width: barWidth, backgroundColor: barColor}"></div>
                 </div>
-                <div class="region_qolTitle" :style="{ color: barColor }">{{ overallAverage.toFixed(1) }}</div>
+                <div class="region_qolTitle" :style="{ color: barColor }">{{ resources.qol }}</div>
               </div>
               <div>Assessment of the quality of life</div>
-              <div>Данных собрано: {{ countData }}</div>
+              <div>Данных собрано: {{ resources.count_data }}</div>
             </div>
-          </div>
-          <div class="region_filters">
-            <div v-for="resource in resources" :key="resource.resource_name">
-              <input type="checkbox" v-model="selectedResources" :value="resource.resource_name" @change="updateChartData" di> {{ resource.resource_name }}
-            </div>
-          </div>
-          <div class="region_data_filter">
-            <label for="startDate">Start Date:</label>
-            <select v-model="paramsFilter.param1" @change="fetchResourceStats">
-              <option v-for="date in availableDates" :value="date">{{ date }}</option>
-            </select>
-            <label for="endDate">End Date:</label>
-            <select v-model="paramsFilter.param2" @change="fetchResourceStats">
-              <option v-for="date in availableDates" :value="date">{{ date }}</option>
-            </select>
           </div>
         </div>
-      
       <div class="region_chart">
         <canvas id="marksChart" class="chart_canvas"></canvas>
       </div>
@@ -48,136 +35,159 @@
 
 <script>
 import Chart from 'chart.js/auto';
+import axios from 'axios'
+import Loader from './Loader.vue'
 
 export default {
+  components: {Loader},
   props: {
     toggleResourceStats: {
       type: Function,
+      requirements: true,
+    },
+    regionId: {
+      type: String,
       requirements: true,
     }
   },
   data() {
     return {
-      resources: [],
-      selectedResources: [], // массив для хранения выбранных ресурсов
-      chart: null, // переменная для хранения экземпляра графика
+      loading: true,
+      resources: null,
+      chart: null,
       marksData: {
         labels: [], // пустой массив для меток
         datasets: [{
-          label: "Архангельск",
-          backgroundColor: "rgb(85,225,255, 0.2)",
-          data: [] // пустой массив для данных
+          label: 'QoL Categories',
+          data: [],
+          backgroundColor: 'rgba(66, 182, 246, 0.3)',
+          borderColor: '#4379EE',
+          borderWidth: 2,
+          pointBackgroundColor: '#4379EE',
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: '#4379EE',
+          pointHoverBorderColor: '#4379EE',
         }]
       },
-      overallAverage: 0, // переменная для хранения общего среднего
-      paramsFilter : {
-        // Ваши параметры здесь, например:
-        param1: '2023-09-01',
-        param2: '2023-12-31'
-      },
-      availableDates: [], // Массив доступных дат
-      countData: null,
     };
   },
   computed: {
     barWidth() {
-      // Вычисляем ширину полосы в зависимости от значения overallAverage
-      return (this.overallAverage / 10) * 100 + "%";
+      // Вычисляем ширину полосы в зависимости от значения resources.qol
+      return (this.resources.qol / 10) * 100 + "%";
     },
     barColor() {
-      // Вычисляем цвет фона в зависимости от значения overallAverage
-      const hue = (this.overallAverage / 10) * 120; // Преобразуем overallAverage в оттенок цвета
+      // Вычисляем цвет фона в зависимости от значения resources.qol
+      const hue = (this.resources.qol / 10) * 120; // Преобразуем resources.qol в оттенок цвета
       return `hsl(${hue}, 100%, 50%)`; // Используем HSL для создания градиента цвета
     },
-    titleColor() {
-      // Вычисляем цвет текста в зависимости от значения overallAverage
-      const hue = (this.overallAverage / 10) * 120; // Преобразуем overallAverage в оттенок цвета
-      const lightness = this.overallAverage >= 7 ? 50 : 100; // Устанавливаем яркость в зависимости от значения overallAverage
-      return `hsl(${hue}, 100%, ${lightness}%)`; // Используем HSL для создания градиента цвета
-    }
   },
-  mounted() {
-    this.fetchResourceStats();
+  created() {
+    this.fetchRegionDetail(this.regionId)
   },
   methods: {
-    updateCountData() {
-      this.countData = this.resources.reduce((total, resource) => {
-        if (this.selectedResources.includes(resource.resource_name)) {
-          return total + resource.data_count;
-        }
-        return total;
-      }, 0);
+    fetchRegionDetail(regionId) {
+      console.log(regionId)
+      axios.get(`${import.meta.env.BASE_URL}/api/v1/dashboard/region-detail/${regionId}/`)
+        .then(response => {
+          this.resources = response.data;
+          this.loading = false;
+          this.updateChartData();
+          this.renderChart();
+        })
+        .catch(error => {
+          console.error(error);
+          this.loading = false;
+        });
+    },
+    updateChartData() {
+      const labels = [];
+      const data = [];
+      for (const category in this.resources.qol_category) {
+        labels.push(category);
+        data.push(this.resources.qol_category[category]);
+      }
+      this.marksData.labels = labels;
+      this.marksData.datasets[0].data = data;
     },
     renderChart() {
+      if (this.chart) {
+        this.chart.destroy();
+      }
       const marksCanvas = document.getElementById("marksChart");
-
       this.chart = new Chart(marksCanvas, {
         type: 'radar',
         data: this.marksData,
         options: {
-          layout: {
-    padding: 0
-  },
           plugins: {
             legend: {
-              display: false
+              display: false,
+            },
+            tooltip: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  return data.labels[tooltipItem.index] + ': ' + tooltipItem.value;
+                }
+              }
             }
-          }
+          },
+          elements: {
+            line: {
+              borderWidth: 2,
+              borderColor: '#4379EE',
+              backgroundColor: 'rgba(66, 182, 246, 0.3)',
+              fill: true,
+              tension: 0.2
+            },
+            point: {
+              backgroundColor: '#4379EE',
+              radius: 4,
+              borderWidth: 2,
+              borderColor: '#fff',
+              hoverRadius: 6,
+              hoverBorderWidth: 2,
+            }
+          },
+          scale: {
+            r: {
+              suggestedMin: 0,
+              suggestedMax: 10,
+              ticks: {
+                stepSize: 2,
+                showLabelBackdrop: false,
+                font: {
+                  size: 20 // установить размер шрифта
+                },
+                fontSize: {
+                  fontSize: 500
+                },
+              },
+              
+            grid: {
+              color: '#ccc',
+              lineWidth: 1,
+            }
+          },
+        },
+        layout: {
+          padding: 20,
+          pointLabels: { fontSize:50 },
+          fontSize: 50,
+          text: 50
         }
-      });
-    },
-    async fetchResourceStats() {
-      try {
-        const response = await fetch(`http://127.0.0.1:8000/api/v1/dashboard/resource_stats/?param1=${this.paramsFilter.param1}&param2=${this.paramsFilter.param2}`);
-        const data = await response.json();
-        this.selectedResources = data.map(resource => resource.resource_name);
-        // Получаем метки из первого объекта JSON-данных
-        this.marksData.labels = Object.keys(data[0].categories);
-        console.log(data)
-        // Обновляем данные для графика и общую среднюю оценку
-        this.resources = data;
-        this.updateChartData();
-        
-        // Рисуем график
-        this.renderChart();
-        
-      } catch (error) {
-        console.error('Error fetching resource stats:', error);
       }
-    },
-    updateChartData() {
-      this.updateCountData();
-      // Очищаем данные о категориях в датасете
-      this.marksData.datasets[0].data = [];
-      
-      // Считаем среднее значение по каждой категории и общую среднюю оценку
-      let totalSum = 0;
-      let totalCount = 0;
-      for (let category in this.resources[0].categories) {
-        let sum = 0;
-        for (let resource of this.resources) {
-          if (this.selectedResources.includes(resource.resource_name)) {
-            sum += resource.categories[category];
-          }
-        }
-        let average = sum / this.selectedResources.length;
-        totalSum += average;
-        totalCount++;
-        this.marksData.datasets[0].data.push(average);
-      }
-      this.overallAverage = totalSum / totalCount;
-      
-      // Перерисовываем график
-      if (this.chart) {
-        this.chart.destroy();
-      }
-      this.renderChart(); // Заново рисуем график с обновленными данными
+    });
     }
   }
 }
 </script>
 
 <style scoped>
+.loading {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
 .mainlk {
   position: absolute;
   z-index: 10000000;
@@ -193,7 +203,6 @@ export default {
 
 .lk_region {
   position: relative;
-  width: 1400px; /*  Тут хз */
   background: #fff;
   border-radius: 15px;
   padding: 30px;
@@ -223,9 +232,6 @@ export default {
 
 .region_info{
   /* display: flex; */
-  width: 300px;
-  justify-content: space-between;
-  margin-bottom: 15px;
 }
 .region_name {
   font-weight: 700;
@@ -253,9 +259,10 @@ export default {
   background: #D9D9D9;
 }
 .region_bar_activ{
-  width: 50%;
+  width: 0;
   height: 15px;
   border-radius: 5px;
+  background-color: #4AD991;
   transition: width 500ms ease-in-out;
 }
 .region_filters, .region_data_filter {
@@ -263,8 +270,8 @@ export default {
 }
 .chart_canvas{
 
-  width: 900px !important;
-  height: 900px !important;
+  width: 600px !important;
+  height: 600px !important;
 }
 
 </style>

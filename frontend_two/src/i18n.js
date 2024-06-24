@@ -15,6 +15,17 @@ const messages = {
     comparison: 'Compared to the previous day',
     avgregionqol: 'Assessment of the quality of life in Russia',
     searchregion: 'Search region',
+    regionname: "Region Name",
+    amountofdata: "Amount of Data",
+    more:"More",
+    ratingcategory:"Rating the category",
+    one_rc:"Counting the number of opinions (positive, negative and neutral)",
+    two_rc:"Dividing the number of positive and neutral opinions by the total number of opinions by category",
+    three_rc:"Multiplying the score by 10",
+    rr: "Rating the region",
+    one_rr: "Calculating the rating for each category of the region",
+    two_rr: "The average value of all categories will be the rating of the region",
+
   },
   ru: {
     dashboard: 'Дашборд',
@@ -30,6 +41,16 @@ const messages = {
     comparison: 'По сравнению с прошлым днём',
     avgregionqol: 'Оценка качества жизни по России',
     searchregion: 'Введите название или код региона',
+    regionname: "Название региона",
+    amountofdata: "Кол-во собранных данных",
+    more:"Подробнее",
+    ratingcategory: "Рейтинг категорий",
+    one_rc:"Подсчитываем количество мнений (положительных, отрицательных и нейтральных)",
+    two_rc:"Делим количество положительных и нейтральных мнений на общее количество мнений по категории",
+    three_rc:"Умножаем полученную оценку на 10",
+    rr: "Рейтинг региона",
+    one_rr: "Подсчитываем рейтинг по каждой категории региона",
+    two_rr: "Среднее значение всех категорий будет являться рейтингом региона",
   }
 }
 

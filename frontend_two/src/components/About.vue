@@ -5,30 +5,27 @@
     <div className="about_wrapper flex">
       <div className="about_item">
         <div className="item_title">
-          Rating the category
+          {{  $t('ratingcategory')  }}
         </div>
         <div className="item_descr">
-          1. Counting the number of opinions (positive, negative and neutral)
+          1. {{  $t('one_rc')  }}
         </div>
         <div className="item_descr">
-          2. Dividing the number of positive opinions by the number of other opinions
+          2. {{  $t('two_rc')  }}
         </div>
         <div className="item_descr">
-          3. Multiplying the received score by 100
+          3. {{  $t('three_rc')  }}
         </div>
       </div>
       <div className="about_item">
         <div className="item_title">
-          Rating the region
+          {{  $t('rr')  }}
         </div>
         <div className="item_descr">
-          1. Counting the number of categories
+          1. {{  $t('one_rr')  }}
         </div>
         <div className="item_descr">
-          2. Adding up the scores of each category
-        </div>
-        <div className="item_descr">
-          3. Dividing the sum of the category ratings by the sum of the number of categories
+          2. {{  $t('two_rr')  }}
         </div>
       </div>
     </div>

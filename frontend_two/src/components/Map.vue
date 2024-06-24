@@ -1,4 +1,5 @@
 <template>
+  <ResourceStats v-if="showResourceStats" :regionId="selectedRegionId" :toggleResourceStats="toggleResourceStats"/>
   <div>
     <div class="map_title">
       {{ $t('map') }}
@@ -29,8 +30,8 @@
             :settings="{ coordinates: [region.latitude, region.longitude] }"
             position="top-center left-center"
           >
-            <div class="custom-marker" @click="produceAnAlert(region.name)">
-              <div class="custom-marker-qol">
+            <div class="custom-marker" @click="toggleResourceStats(region.id)">
+              <div class="custom-marker-qol" >
                 {{ region.qol }}
               </div>
             </div>
@@ -44,6 +45,7 @@
 <script>
 import axios from 'axios'
 import Loader from './Loader.vue'
+import ResourceStats from './ResourceStats.vue';
 import { YandexMap, YandexMapDefaultSchemeLayer, YandexMapMarker, YandexMapDefaultFeaturesLayer  } from 'vue-yandex-maps'
 import { ref } from 'vue'
 export default {
@@ -53,17 +55,24 @@ export default {
     YandexMapDefaultSchemeLayer,
     YandexMapMarker,
     YandexMapDefaultFeaturesLayer,
+    ResourceStats,
   },
   data() {
     return {
       data: {},
       loading: true,
+      showResourceStats: false,
+      selectedRegionId: null,
     };
   },
   created() {
     this.fetchRegionQOL()
   },
   methods: {
+    toggleResourceStats(regionId) {
+        this.selectedRegionId = regionId;
+        this.showResourceStats = !this.showResourceStats;
+    },
     fetchRegionQOL() {
       axios.get(`${import.meta.env.BASE_URL}/api/v1/dashboard/region-qol/`)
         .then(response => {
@@ -102,11 +111,17 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 25px;
   border: 3px solid #4AD991;
+  scale: 1;
+  transition: scale 200ms ease-in-out;
+}
+.custom-marker:hover {
+  cursor: pointer;
+  scale: 1.5;
 }
 .custom-marker-qol {
     font-weight: 700;
-    font-size: 25px;
     color: #4AD991;
 }
 .map_title {

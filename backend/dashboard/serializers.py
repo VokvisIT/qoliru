@@ -90,6 +90,59 @@ CATEGORY_MAPPING = {
     '12': 'Факты'
 }
 
+class RegionDetailSerializer(serializers.ModelSerializer):
+    count_data = serializers.SerializerMethodField()
+    qol = serializers.SerializerMethodField()
+    qol_category = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Region
+        fields = ['name', 'qol', 'count_data', 'qol_category']
+
+    def get_count_data(self, obj):
+        return ModelDataTest.objects.filter(region=obj).count()
+
+    def get_qol(self, obj):
+        data = ModelDataTest.objects.filter(region=obj).values('category').annotate(
+            positive_count=Count('id', filter=Q(tonality='1')),
+            neutral_count=Count('id', filter=Q(tonality='0')),
+            negative_count=Count('id', filter=Q(tonality='2')),
+        )
+
+        category_qols = []
+        for category in data:
+            total_count = category['positive_count'] + category['neutral_count'] + category['negative_count']
+            if total_count == 0:
+                continue
+            positive_neutral_ratio = (category['positive_count'] + category['neutral_count']) / total_count
+            qol = positive_neutral_ratio * 10
+            category_qols.append(qol)
+
+        if not category_qols:
+            return 0
+        return round(sum(category_qols) / len(category_qols), 1)
+
+    def get_qol_category(self, obj):
+        data = ModelDataTest.objects.filter(region=obj).values('category').annotate(
+            positive_count=Count('id', filter=Q(tonality='1')),
+            neutral_count=Count('id', filter=Q(tonality='0')),
+            negative_count=Count('id', filter=Q(tonality='2')),
+        )
+
+        category_qol = {}
+        for category in data:
+            category_name = CATEGORY_MAPPING[str(category['category'])]
+            total_count = category['positive_count'] + category['neutral_count'] + category['negative_count']
+            if total_count == 0:
+                category_qol[category_name] = 0
+                continue
+            positive_neutral_ratio = (category['positive_count'] + category['neutral_count']) / total_count
+            qol = positive_neutral_ratio * 10
+            category_qol[category_name] = round(qol, 1)
+
+        return category_qol
+
+
 class BestCategoryQOLSerializer(serializers.ModelSerializer):
     name = serializers.CharField(source='region.name')
     category_name = serializers.SerializerMethodField()
@@ -202,4 +255,75 @@ class AvgRegionQOLSerializer(serializers.ModelSerializer):
             data.append(qol)
 
         return {'labels': labels, 'data': data}
-    
+
+class RegionDataSerializer(serializers.ModelSerializer):
+    count_data = serializers.SerializerMethodField()
+    bestcategory = serializers.SerializerMethodField()
+    worstcategory = serializers.SerializerMethodField()
+    qol = serializers.SerializerMethodField()
+    name = serializers.CharField()
+
+    class Meta:
+        model = Region
+        fields = ['id', 'name', 'count_data', 'bestcategory', 'worstcategory', 'qol']
+
+    def get_count_data(self, obj):
+        return ModelDataTest.objects.filter(region=obj).count()
+
+    def get_bestcategory(self, obj):
+        data = ModelDataTest.objects.filter(region=obj).values('category').annotate(
+            positive_count=Count('id', filter=Q(tonality='1')),
+            neutral_count=Count('id', filter=Q(tonality='0')),
+            negative_count=Count('id', filter=Q(tonality='2')),
+        )
+
+        best_qol = 0
+        for category in data:
+            total_count = category['positive_count'] + category['neutral_count'] + category['negative_count']
+            if total_count == 0:
+                continue
+            positive_neutral_ratio = (category['positive_count'] + category['neutral_count']) / total_count
+            qol = positive_neutral_ratio * 10
+            if qol > best_qol:
+                best_qol = qol
+
+        return round(best_qol, 1)
+
+    def get_worstcategory(self, obj):
+        data = ModelDataTest.objects.filter(region=obj).values('category').annotate(
+            positive_count=Count('id', filter=Q(tonality='1')),
+            neutral_count=Count('id', filter=Q(tonality='0')),
+            negative_count=Count('id', filter=Q(tonality='2')),
+        )
+
+        worst_qol = 10
+        for category in data:
+            total_count = category['positive_count'] + category['neutral_count'] + category['negative_count']
+            if total_count == 0:
+                continue
+            positive_neutral_ratio = (category['positive_count'] + category['neutral_count']) / total_count
+            qol = positive_neutral_ratio * 10
+            if qol < worst_qol:
+                worst_qol = qol
+
+        return round(worst_qol, 1)
+
+    def get_qol(self, obj):
+        data = ModelDataTest.objects.filter(region=obj).values('category').annotate(
+            positive_count=Count('id', filter=Q(tonality='1')),
+            neutral_count=Count('id', filter=Q(tonality='0')),
+            negative_count=Count('id', filter=Q(tonality='2')),
+        )
+
+        category_qols = []
+        for category in data:
+            total_count = category['positive_count'] + category['neutral_count'] + category['negative_count']
+            if total_count == 0:
+                continue
+            positive_neutral_ratio = (category['positive_count'] + category['neutral_count']) / total_count
+            qol = positive_neutral_ratio * 10
+            category_qols.append(qol)
+
+        if not category_qols:
+            return 0
+        return round(sum(category_qols) / len(category_qols), 1)

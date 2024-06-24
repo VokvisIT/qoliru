@@ -6,7 +6,23 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.utils import timezone
 from .models import ModelDataTest, Region
-from .serializers import AvgRegionQOLSerializer, BestCategoryQOLSerializer, RegionQOLSerializer, WorstCategoryQOLSerializer
+from .serializers import AvgRegionQOLSerializer, BestCategoryQOLSerializer, RegionDataSerializer, RegionDetailSerializer, RegionQOLSerializer, WorstCategoryQOLSerializer
+
+class RegionDetailView(APIView):
+    def get(self, request, region_id):
+        try:
+            region = Region.objects.get(id=region_id)
+        except Region.DoesNotExist:
+            return Response({"detail": "Region not found"}, status=status.HTTP_404_NOT_FOUND)
+
+        serializer = RegionDetailSerializer(region)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+class RegionQOLDataView(APIView):
+    def get(self, request):
+        regions = Region.objects.all()
+        serializer = RegionDataSerializer(regions, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 class BestRegionQOLView(APIView):
     def get(self, request):
