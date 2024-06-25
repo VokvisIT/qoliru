@@ -6,8 +6,8 @@
       <div v-if="loading" className="loading">
         <Loader />
       </div>
-      <div>
-        <canvas id="myChart" width="1078" height="300"></canvas>
+      <div class="myChart">
+        <canvas id="myChart" ></canvas>
       </div>
     </div>
 </template>
@@ -138,6 +138,9 @@ export default {
     border-radius: 15px;
     background: #fff;
     box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
+}
+.myChart {
+  width: 300px;
 }
 .loading {
   position: absolute;

@@ -19,7 +19,7 @@ class RegionQOLSerializer(serializers.ModelSerializer):
         return round(self.calculate_qol(obj), 1)
 
     def get_qol_change(self, obj):
-        today = datetime.date.today()
+        today = datetime.date.today() - datetime.timedelta(days=1)
         yesterday = today - datetime.timedelta(days=1)
         
         today_qol = self.calculate_daily_qol(obj, today)
@@ -157,7 +157,7 @@ class BestCategoryQOLSerializer(serializers.ModelSerializer):
         return CATEGORY_MAPPING[str(obj['category'])]
 
     def get_qol_change(self, obj):
-        today = datetime.date.today()
+        today = datetime.date.today()- datetime.timedelta(days=1)
         yesterday = today - datetime.timedelta(days=1)
 
         today_qol = self.calculate_daily_qol(obj, today)
@@ -192,7 +192,7 @@ class WorstCategoryQOLSerializer(serializers.ModelSerializer):
         return CATEGORY_MAPPING[str(obj['category'])]
 
     def get_qol_change(self, obj):
-        today = datetime.date.today()
+        today = datetime.date.today() - datetime.timedelta(days=1)
         yesterday = today - datetime.timedelta(days=1)
 
         today_qol = self.calculate_daily_qol(obj, today)

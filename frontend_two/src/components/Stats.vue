@@ -61,7 +61,6 @@
                 </div>
             </div>
         </div>
-
         <div className="stats_item">
             <div v-if="loading_worst_category" className="loading">
                 <Loader />
@@ -94,13 +93,12 @@
                 </div>
             </div>
         </div>
-
         <div className="stats_item">
             <div v-if="loading_count_data" className="loading">
                 <Loader />
             </div>
             <div v-else>
-                <div className="stats_item_qol flex">
+                <div className="stats_item_qol data flex">
                     <div className="item_qol">
                         <img src="../assets/img/Subtract.svg" alt="">
                     </div>
@@ -210,15 +208,32 @@ export default {
     width: 100%;
     justify-content: space-between;
     margin-bottom: 30px;
+    flex-wrap: wrap; /* Добавлено для адаптивности */
 }
 .stats_item {
-    height: fit-content;
     position: relative;
     padding: 16px;
-    width: 300px;
+    max-width: 300px;
     border-radius: 15px;
     background: #fff;
+    margin-right: 30px;
     box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
+}
+.stats_item:last-child {
+    margin-right: 0;
+}
+@media (max-width: 1563px) {
+    .stats_wrapper {
+        margin-bottom: 0;
+    }
+    .stats_item{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 1258px) {
+    .stats_item:nth-child(2n){
+        margin-right: 0;
+    }
 }
 .loading {
     display: flex;
@@ -235,6 +250,9 @@ export default {
     right: 16px;
     align-items: center;
     justify-content: center;
+}
+.data {
+    background-color: #b6b6b6;
 }
 .item_qol {
     font-weight: 700;

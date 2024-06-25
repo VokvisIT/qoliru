@@ -26,6 +26,6 @@ export default {
   font-size: 32px;
 }
 .main_wrapper {
-  width: 1400px;
+  max-width: 1400px;
 }
 </style>
