@@ -133,24 +133,25 @@ export default {
 <style scoped>
 .chart_wrapper {
   position: relative;
-    width: 100%;
-    padding: 32px;
-    border-radius: 15px;
-    background: #fff;
-    box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  padding: 32px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
 }
-.myChart {
-  width: 300px;
-}
+
 .loading {
   position: absolute;
   top: 50%;
   right: 50%;
 }
 .chart_title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 50px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.myChart{
+  width: 100%;
 }
 
 </style>

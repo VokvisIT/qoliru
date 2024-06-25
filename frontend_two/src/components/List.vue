@@ -3,7 +3,7 @@
     <div className="list_title">
         {{  $t('list')  }}
     </div>
-    <div className="wrapper">
+    <div className="wrapper-list">
         <div className="list_wrapper_title">
             {{  $t('qolir')  }}
         </div>
@@ -91,6 +91,13 @@ export default {
 </script>
 
 <style scoped>
+.wrapper-list{
+    overflow-x: scroll;
+    max-width: 1400px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
+}
 .list_title {
     margin-bottom: 30px;
     font-weight: 700;
@@ -153,4 +160,6 @@ export default {
     background: #749eff;
     cursor: pointer;
 }
+
+
 </style>

@@ -1,42 +1,53 @@
 <template>
     <div class="header_container flex">
-      <input type="text" :placeholder="$t('searchregion')">
-      <div class="header_language">
-        <div className="lang_wrap flex" @click="toggleLanguageMenu()" v-if="this.$i18n.locale=='ru'">
-            <img src="../assets/img/ru-04.svg" alt="" className="lang_img"/>
-            <div>Русский</div>
+        <div @click="toggleMenu" class="menu">
+            <img src="../assets/img/Arrow_right_stop.svg" alt="Доготип">
         </div>
-        <div className="lang_wrap flex" @click="toggleLanguageMenu()" v-if="this.$i18n.locale=='en'">
-            <img src="../assets/img/en-04.svg" alt="" className="lang_img"/>
-            <div>English</div>
-        </div>
-        <div className="select_lang" v-if="isLanguageMenuVisible">
-            <div className="select_title">
-                {{ $t('button') }}
+        <!-- <div class="header_container__input">
+            <input type="text" :placeholder="$t('searchregion')">
+        </div> -->
+        <div class="header_language">
+            <div className="lang_wrap flex" @click="toggleLanguageMenu()" v-if="this.$i18n.locale=='ru'">
+                <img src="../assets/img/ru-04.svg" alt="" className="lang_img"/>
+                <div class="lang_title">Русский</div>
             </div>
-            <ul class="list_lang list-reset">
-            <li @click="changeLanguage('en')" className="lang_item flex">
-                <div style="align-items: center; display: flex;">
-                    <img src="../assets/img/en-04.svg" alt="" className="lang_img"/>
-                    <div className="lang_item_title">English</div>
+            <div className="lang_wrap flex" @click="toggleLanguageMenu()" v-if="this.$i18n.locale=='en'">
+                <img src="../assets/img/en-04.svg" alt="" className="lang_img"/>
+                <div class="lang_title">English</div>
+            </div>
+            <div className="select_lang" v-if="isLanguageMenuVisible">
+                <div className="select_title">
+                    {{ $t('button') }}
                 </div>
-                <img src="../assets/check.svg" alt="" className="lang_img_chech" v-if="this.$i18n.locale=='en'"/>
-            </li>
-            <li @click="changeLanguage('ru')" className="lang_item flex">
-                <div style="align-items: center; display: flex;">
-                    <img src="../assets/img/ru-04.svg" alt="" className="lang_img"/>
-                    <div className="lang_item_title">Русский</div>
-                </div>
-                <img src="../assets/check.svg" alt="" className="lang_img_chech" v-if="this.$i18n.locale=='ru'"/>
-            </li>
-            </ul>
+                <ul class="list_lang list-reset">
+                <li @click="changeLanguage('en')" className="lang_item flex">
+                    <div style="align-items: center; display: flex;">
+                        <img src="../assets/img/en-04.svg" alt="" className="lang_img"/>
+                        <div className="lang_item_title">English</div>
+                    </div>
+                    <img src="../assets/check.svg" alt="" className="lang_img_chech" v-if="this.$i18n.locale=='en'"/>
+                </li>
+                <li @click="changeLanguage('ru')" className="lang_item flex">
+                    <div style="align-items: center; display: flex;">
+                        <img src="../assets/img/ru-04.svg" alt="" className="lang_img"/>
+                        <div className="lang_item_title">Русский</div>
+                    </div>
+                    <img src="../assets/check.svg" alt="" className="lang_img_chech" v-if="this.$i18n.locale=='ru'"/>
+                </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
   </template>
   
   <script>
   export default {
+    props: {
+        toggleMenu: {
+        type: Function,
+        required: true
+        }
+    },
     data() {
       return {
         isLanguageMenuVisible: false,
@@ -55,13 +66,17 @@
   </script>
 
 <style scoped>
+.menu {
+    display: none;
+}
+
 .header_container {
     position: relative;
     z-index: 10000;
     padding: 0 30px;
     height: 70px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
     border-bottom: 1px solid #E8E8E8;
 }
 .header_container input {
@@ -69,7 +84,7 @@
 }
 .header_container input {
     color: #202224;
-    width: 400px;
+    max-width: 400px;
     padding: 9px 15px;
     border-radius: 19px;
     border: 0.6px solid #D5D5D5;
@@ -124,5 +139,29 @@
     border: 0;
     border-radius: 6px;
     transition: background 300ms ease-in-out;
+}
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        margin-right: 15px;
+    }
+    .menu img {
+        width: 30px;
+        height: 30px;
+    }
+    .header_container {
+        justify-content: start;
+    }
+    .header_container input {
+        width: 100px;
+        margin-right: 15px;
+    }
+    .header_container__input{
+        margin-right: 15px;
+    }
+    .lang_title {
+        display: none;
+    }
+    
 }
 </style>

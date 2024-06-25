@@ -1,386 +1,494 @@
-2024-06-25 08:48:29,098 INFO script started
-2024-06-25 08:48:29,098 INFO parsing channel zhest_29_chat
-2024-06-25 08:48:29,186 INFO Connecting...
-2024-06-25 08:48:29,253 INFO Connected! Production DC2 - IPv4
-2024-06-25 08:48:29,254 INFO NetworkTask started
-2024-06-25 08:48:29,593 INFO Session initialized: Layer 158
-2024-06-25 08:48:29,594 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
-2024-06-25 08:48:29,594 INFO System: Windows 10 (en)
-2024-06-25 08:48:29,594 INFO Session started
-2024-06-25 08:48:29,612 INFO PingTask started
-2024-06-25 08:48:29,773 INFO Started 16 HandlerTasks
-2024-06-25 08:48:30,969 WARNING [AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
-2024-06-25 08:48:30,991 INFO Stopped 16 HandlerTasks
-2024-06-25 08:48:30,992 INFO PingTask stopped
-2024-06-25 08:48:30,993 INFO Disconnected
-2024-06-25 08:48:30,993 INFO NetworkTask stopped
-2024-06-25 08:48:30,994 INFO Session stopped
-2024-06-25 08:48:30,994 WARNING some errors occurred during script execution
-2024-06-25 08:48:34,167 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:48:34,258 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:48:37,637 INFO script started
-2024-06-25 08:48:37,637 INFO parsing channel chatter29
-2024-06-25 08:48:37,677 INFO Connecting...
-2024-06-25 08:48:37,735 INFO Connected! Production DC2 - IPv4
-2024-06-25 08:48:37,735 INFO NetworkTask started
-2024-06-25 08:48:38,015 INFO Session initialized: Layer 158
-2024-06-25 08:48:38,015 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
-2024-06-25 08:48:38,015 INFO System: Windows 10 (en)
-2024-06-25 08:48:38,015 INFO Session started
-2024-06-25 08:48:38,019 INFO PingTask started
-2024-06-25 08:48:38,157 INFO Started 16 HandlerTasks
-2024-06-25 08:48:39,106 WARNING [AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'")]
-2024-06-25 08:48:39,132 INFO Stopped 16 HandlerTasks
-2024-06-25 08:48:39,133 INFO PingTask stopped
-2024-06-25 08:48:39,134 INFO Disconnected
-2024-06-25 08:48:39,134 INFO NetworkTask stopped
-2024-06-25 08:48:39,135 INFO Session stopped
-2024-06-25 08:48:39,136 WARNING some errors occurred during script execution
-2024-06-25 08:48:39,173 INFO script started
-2024-06-25 08:48:39,173 INFO parsing channel arkhangelsk001
-2024-06-25 08:48:39,210 INFO Connecting...
-2024-06-25 08:48:39,282 INFO Connected! Production DC2 - IPv4
-2024-06-25 08:48:39,282 INFO NetworkTask started
-2024-06-25 08:48:39,615 INFO Session initialized: Layer 158
-2024-06-25 08:48:39,615 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
-2024-06-25 08:48:39,615 INFO System: Windows 10 (en)
-2024-06-25 08:48:39,615 INFO Session started
-2024-06-25 08:48:39,620 INFO PingTask started
-2024-06-25 08:48:39,783 INFO Started 16 HandlerTasks
-2024-06-25 08:48:46,944 WARNING [AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'")]
-2024-06-25 08:48:46,956 INFO Stopped 16 HandlerTasks
-2024-06-25 08:48:46,956 INFO PingTask stopped
-2024-06-25 08:48:46,956 INFO Disconnected
-2024-06-25 08:48:46,957 INFO NetworkTask stopped
-2024-06-25 08:48:46,957 INFO Session stopped
-2024-06-25 08:48:46,957 WARNING some errors occurred during script execution
-2024-06-25 08:48:50,172 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:48:50,198 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:48:56,074 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:48:56,101 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:49:01,976 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:49:02,003 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:49:08,658 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:49:08,688 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:49:15,463 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:49:15,490 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:49:21,553 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:49:21,579 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:49:27,823 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:49:27,848 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:49:33,919 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:49:33,956 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:49:40,488 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:49:40,516 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:49:47,398 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:49:47,451 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:49:54,052 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:49:54,083 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:50:00,540 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:50:00,677 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:50:07,402 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:50:07,440 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:50:13,900 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:50:13,930 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:50:20,352 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:50:20,381 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:50:26,838 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:50:26,867 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:50:33,315 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:50:33,352 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:50:36,438 INFO script started
-2024-06-25 08:50:36,438 INFO parsing channel crimyakutiaru
-2024-06-25 08:50:36,479 INFO Connecting...
-2024-06-25 08:50:36,546 INFO Connected! Production DC2 - IPv4
-2024-06-25 08:50:36,546 INFO NetworkTask started
-2024-06-25 08:50:36,868 INFO Session initialized: Layer 158
-2024-06-25 08:50:36,868 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
-2024-06-25 08:50:36,868 INFO System: Windows 10 (en)
-2024-06-25 08:50:36,868 INFO Session started
-2024-06-25 08:50:36,872 INFO PingTask started
-2024-06-25 08:50:37,032 INFO Started 16 HandlerTasks
-2024-06-25 08:50:38,014 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'")]
-2024-06-25 08:50:38,025 INFO Stopped 16 HandlerTasks
-2024-06-25 08:50:38,026 INFO PingTask stopped
-2024-06-25 08:50:38,026 INFO Disconnected
-2024-06-25 08:50:38,026 INFO NetworkTask stopped
-2024-06-25 08:50:38,026 INFO Session stopped
-2024-06-25 08:50:38,026 WARNING some errors occurred during script execution
-2024-06-25 08:50:42,423 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:50:42,453 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:50:50,516 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:50:50,655 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:50:58,447 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:50:58,479 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:51:06,894 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:51:06,920 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:51:13,559 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:51:13,591 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:51:20,017 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:51:20,055 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:51:26,593 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:51:26,621 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:51:35,951 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:51:35,977 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:51:42,910 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:51:42,989 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:51:49,887 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:51:49,913 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:51:53,023 INFO script started
-2024-06-25 08:51:53,023 INFO parsing channel sakhaday
-2024-06-25 08:51:53,063 INFO Connecting...
-2024-06-25 08:51:53,135 INFO Connected! Production DC2 - IPv4
-2024-06-25 08:51:53,135 INFO NetworkTask started
-2024-06-25 08:51:53,508 INFO Session initialized: Layer 158
-2024-06-25 08:51:53,508 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
-2024-06-25 08:51:53,508 INFO System: Windows 10 (en)
-2024-06-25 08:51:53,508 INFO Session started
-2024-06-25 08:51:53,513 INFO PingTask started
-2024-06-25 08:51:53,739 INFO Started 16 HandlerTasks
-2024-06-25 08:51:55,068 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
-2024-06-25 08:51:55,081 INFO Stopped 16 HandlerTasks
-2024-06-25 08:51:55,081 INFO PingTask stopped
-2024-06-25 08:51:55,082 INFO Disconnected
-2024-06-25 08:51:55,082 INFO NetworkTask stopped
-2024-06-25 08:51:55,082 INFO Session stopped
-2024-06-25 08:51:55,082 WARNING some errors occurred during script execution
-2024-06-25 08:51:58,460 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:51:58,488 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:52:04,907 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:52:04,939 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:52:11,468 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:52:11,497 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:52:18,421 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:52:18,448 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:52:24,901 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:52:24,929 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:52:32,460 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:52:32,486 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:52:38,594 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:52:38,619 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:52:48,354 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:52:48,379 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:52:55,239 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:52:55,271 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:53:01,639 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:53:01,666 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:53:08,164 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:53:08,190 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:53:16,237 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:53:16,274 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:53:23,167 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:53:23,195 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:53:29,662 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:53:29,689 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:53:36,150 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:53:36,177 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:53:42,640 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:53:42,665 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:53:49,057 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:53:49,082 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:53:55,447 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:53:55,478 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:54:02,876 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:54:02,903 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:54:09,487 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:54:09,514 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:54:19,589 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:54:19,621 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:54:26,234 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:54:26,270 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:54:33,514 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:54:33,648 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:54:40,449 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:54:40,497 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:54:46,930 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:54:46,960 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:54:53,664 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:54:53,690 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:55:00,061 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:55:00,091 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:55:07,276 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:55:07,308 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:55:13,859 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:55:13,887 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:55:20,654 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:55:20,786 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:55:27,862 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:55:27,888 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:55:34,422 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:55:34,456 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:55:41,061 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:55:41,087 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:55:47,607 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:55:47,636 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:55:53,970 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:55:53,997 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:56:00,514 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:56:00,549 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:56:07,273 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:56:07,300 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:56:10,593 INFO script started
-2024-06-25 08:56:10,593 INFO parsing channel novosty_yakutska
-2024-06-25 08:56:10,637 INFO Connecting...
-2024-06-25 08:56:10,698 INFO Connected! Production DC2 - IPv4
-2024-06-25 08:56:10,698 INFO NetworkTask started
-2024-06-25 08:56:11,025 INFO Session initialized: Layer 158
-2024-06-25 08:56:11,025 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
-2024-06-25 08:56:11,025 INFO System: Windows 10 (en)
-2024-06-25 08:56:11,025 INFO Session started
-2024-06-25 08:56:11,030 INFO PingTask started
-2024-06-25 08:56:11,227 INFO Started 16 HandlerTasks
-2024-06-25 08:56:12,262 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
-2024-06-25 08:56:12,274 INFO Stopped 16 HandlerTasks
-2024-06-25 08:56:12,275 INFO PingTask stopped
-2024-06-25 08:56:12,275 INFO Disconnected
-2024-06-25 08:56:12,275 INFO NetworkTask stopped
-2024-06-25 08:56:12,275 INFO Session stopped
-2024-06-25 08:56:12,275 WARNING some errors occurred during script execution
-2024-06-25 08:56:16,072 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:56:16,102 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:56:22,422 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:56:22,448 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:56:29,155 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:56:29,181 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:56:36,563 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:56:36,594 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:56:43,122 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:56:43,151 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:56:49,586 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:56:49,619 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:56:56,450 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:56:56,483 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:57:03,021 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:57:03,046 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:57:06,119 INFO script started
-2024-06-25 08:57:06,119 INFO parsing channel yakutsk_vecherniy
-2024-06-25 08:57:06,169 INFO Connecting...
-2024-06-25 08:57:06,234 INFO Connected! Production DC2 - IPv4
-2024-06-25 08:57:06,234 INFO NetworkTask started
-2024-06-25 08:57:06,546 INFO Session initialized: Layer 158
-2024-06-25 08:57:06,546 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
-2024-06-25 08:57:06,546 INFO System: Windows 10 (en)
-2024-06-25 08:57:06,546 INFO Session started
-2024-06-25 08:57:06,550 INFO PingTask started
-2024-06-25 08:57:06,702 INFO Started 16 HandlerTasks
-2024-06-25 08:57:07,462 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
-2024-06-25 08:57:07,475 INFO Stopped 16 HandlerTasks
-2024-06-25 08:57:07,475 INFO PingTask stopped
-2024-06-25 08:57:07,476 INFO Disconnected
-2024-06-25 08:57:07,476 INFO NetworkTask stopped
-2024-06-25 08:57:07,476 INFO Session stopped
-2024-06-25 08:57:07,476 WARNING some errors occurred during script execution
-2024-06-25 08:57:10,867 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:57:10,894 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:57:17,556 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:57:17,583 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:57:23,788 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:57:23,816 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:57:30,375 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:57:30,404 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:57:36,731 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:57:36,760 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:57:43,141 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:57:43,166 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:57:49,864 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:57:49,891 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:57:56,245 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:57:56,390 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:58:02,780 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:58:02,806 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:58:09,682 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:58:09,708 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:58:16,944 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:58:16,973 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:58:23,467 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:58:23,497 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:58:30,504 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:58:30,540 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:58:38,435 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:58:38,464 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:58:41,547 INFO script started
-2024-06-25 08:58:41,547 INFO parsing channel yakutsk_newss
-2024-06-25 08:58:41,584 INFO Connecting...
-2024-06-25 08:58:41,648 INFO Connected! Production DC2 - IPv4
-2024-06-25 08:58:41,648 INFO NetworkTask started
-2024-06-25 08:58:41,978 INFO Session initialized: Layer 158
-2024-06-25 08:58:41,978 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
-2024-06-25 08:58:41,978 INFO System: Windows 10 (en)
-2024-06-25 08:58:41,978 INFO Session started
-2024-06-25 08:58:41,982 INFO PingTask started
-2024-06-25 08:58:42,170 INFO Started 16 HandlerTasks
-2024-06-25 08:58:42,726 INFO parsing done successfully
-2024-06-25 08:58:42,739 INFO Stopped 16 HandlerTasks
-2024-06-25 08:58:42,739 INFO PingTask stopped
-2024-06-25 08:58:42,739 INFO Disconnected
-2024-06-25 08:58:42,740 INFO NetworkTask stopped
-2024-06-25 08:58:42,740 INFO Session stopped
-2024-06-25 08:58:42,740 WARNING some errors occurred during script execution
-2024-06-25 08:58:47,445 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:58:47,474 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:58:55,423 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:58:55,576 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:59:01,988 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:59:02,018 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:59:08,415 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:59:08,450 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:59:15,202 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:59:15,235 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:59:22,969 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:59:22,996 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:59:29,627 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:59:29,660 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:59:36,539 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:59:36,571 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:59:42,886 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:59:42,912 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:59:45,718 INFO script started
-2024-06-25 08:59:45,719 INFO parsing channel ysiaru
-2024-06-25 08:59:45,758 INFO Connecting...
-2024-06-25 08:59:45,821 INFO Connected! Production DC2 - IPv4
-2024-06-25 08:59:45,821 INFO NetworkTask started
-2024-06-25 08:59:46,123 INFO Session initialized: Layer 158
-2024-06-25 08:59:46,123 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
-2024-06-25 08:59:46,123 INFO System: Windows 10 (en)
-2024-06-25 08:59:46,123 INFO Session started
-2024-06-25 08:59:46,128 INFO PingTask started
-2024-06-25 08:59:46,278 INFO Started 16 HandlerTasks
-2024-06-25 08:59:46,921 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
-2024-06-25 08:59:46,935 INFO Stopped 16 HandlerTasks
-2024-06-25 08:59:46,935 INFO PingTask stopped
-2024-06-25 08:59:46,936 INFO Disconnected
-2024-06-25 08:59:46,936 INFO NetworkTask stopped
-2024-06-25 08:59:46,936 INFO Session stopped
-2024-06-25 08:59:46,936 WARNING some errors occurred during script execution
-2024-06-25 08:59:50,508 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:59:50,638 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 08:59:56,920 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 08:59:56,948 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:00:04,473 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:00:04,500 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:00:11,165 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:00:11,192 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:00:17,527 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:00:17,558 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:00:23,861 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:00:23,887 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:00:30,601 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:00:30,628 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:00:36,860 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:00:36,887 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:00:43,259 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:00:43,285 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:00:50,962 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:00:50,989 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:00:57,783 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:00:57,810 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:01:04,003 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:01:04,029 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:01:11,171 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:01:11,199 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:01:17,626 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:01:17,651 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:01:26,416 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:01:26,471 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
-2024-06-25 09:01:32,333 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
-2024-06-25 09:01:32,357 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:15:08,905 INFO script started
+2024-06-25 20:15:08,906 INFO parsing channel zhest_29_chat
+2024-06-25 20:15:09,074 INFO Connecting...
+2024-06-25 20:15:09,142 INFO Connected! Production DC2 - IPv4
+2024-06-25 20:15:09,145 INFO NetworkTask started
+2024-06-25 20:15:09,617 INFO Session initialized: Layer 158
+2024-06-25 20:15:09,618 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
+2024-06-25 20:15:09,618 INFO System: Windows 10 (en)
+2024-06-25 20:15:09,619 INFO Session started
+2024-06-25 20:15:09,642 INFO PingTask started
+2024-06-25 20:15:10,029 INFO Started 16 HandlerTasks
+2024-06-25 20:15:11,610 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
+2024-06-25 20:15:11,639 INFO Stopped 16 HandlerTasks
+2024-06-25 20:15:11,640 INFO PingTask stopped
+2024-06-25 20:15:11,641 INFO Disconnected
+2024-06-25 20:15:11,642 INFO NetworkTask stopped
+2024-06-25 20:15:11,642 INFO Session stopped
+2024-06-25 20:15:11,643 WARNING some errors occurred during script execution
+2024-06-25 20:15:17,377 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:15:17,556 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:15:26,867 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:15:26,893 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:15:33,190 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:15:33,216 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:15:39,363 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:15:39,389 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:15:45,524 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:15:45,555 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:15:48,416 INFO script started
+2024-06-25 20:15:48,417 INFO parsing channel chatter29
+2024-06-25 20:15:48,456 INFO Connecting...
+2024-06-25 20:15:48,527 INFO Connected! Production DC2 - IPv4
+2024-06-25 20:15:48,528 INFO NetworkTask started
+2024-06-25 20:15:48,894 INFO Session initialized: Layer 158
+2024-06-25 20:15:48,894 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
+2024-06-25 20:15:48,894 INFO System: Windows 10 (en)
+2024-06-25 20:15:48,895 INFO Session started
+2024-06-25 20:15:48,899 INFO PingTask started
+2024-06-25 20:15:49,168 INFO Started 16 HandlerTasks
+2024-06-25 20:15:50,122 INFO parsing done successfully
+2024-06-25 20:15:50,135 INFO Stopped 16 HandlerTasks
+2024-06-25 20:15:50,135 INFO PingTask stopped
+2024-06-25 20:15:50,135 INFO Disconnected
+2024-06-25 20:15:50,135 INFO NetworkTask stopped
+2024-06-25 20:15:50,135 INFO Session stopped
+2024-06-25 20:15:50,135 WARNING some errors occurred during script execution
+2024-06-25 20:15:50,146 INFO script started
+2024-06-25 20:15:50,146 INFO parsing channel arkhangelsk001
+2024-06-25 20:15:50,185 INFO Connecting...
+2024-06-25 20:15:50,249 INFO Connected! Production DC2 - IPv4
+2024-06-25 20:15:50,249 INFO NetworkTask started
+2024-06-25 20:15:50,605 INFO Session initialized: Layer 158
+2024-06-25 20:15:50,605 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
+2024-06-25 20:15:50,605 INFO System: Windows 10 (en)
+2024-06-25 20:15:50,605 INFO Session started
+2024-06-25 20:15:50,610 INFO PingTask started
+2024-06-25 20:15:50,808 INFO Started 16 HandlerTasks
+2024-06-25 20:16:03,764 WARNING [AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'"), AttributeError("'NoneType' object has no attribute 'split'")]
+2024-06-25 20:16:03,789 INFO Stopped 16 HandlerTasks
+2024-06-25 20:16:03,790 INFO PingTask stopped
+2024-06-25 20:16:03,791 INFO Disconnected
+2024-06-25 20:16:03,792 INFO NetworkTask stopped
+2024-06-25 20:16:03,792 INFO Session stopped
+2024-06-25 20:16:03,793 WARNING some errors occurred during script execution
+2024-06-25 20:16:07,045 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:16:07,170 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:16:13,128 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:16:13,153 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:16:19,044 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:16:19,069 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:16:25,023 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:16:25,049 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:16:30,975 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:16:30,999 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:16:36,947 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:16:36,974 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:16:42,916 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:16:42,943 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:16:48,953 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:16:48,978 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:16:54,945 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:16:54,972 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:01,071 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:01,097 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:07,461 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:07,489 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:13,477 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:13,503 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:19,478 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:19,504 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:25,601 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:25,631 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:31,607 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:31,632 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:37,583 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:37,608 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:43,640 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:43,666 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:49,770 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:49,796 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:17:56,144 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:17:56,188 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:18:02,010 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:18:02,035 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:18:07,845 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:18:07,870 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:18:13,686 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:18:13,712 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:18:20,409 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:18:20,435 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:18:26,961 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:18:26,987 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:18:33,619 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:18:33,650 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:18:40,149 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:18:40,176 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:18:48,253 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:18:48,280 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:18:54,772 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:18:54,822 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:19:01,240 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:19:01,275 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:19:07,742 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:19:07,768 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:19:14,437 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:19:14,463 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:19:21,095 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:19:21,123 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:19:27,162 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:19:27,289 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:19:33,231 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:19:33,257 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:19:36,111 INFO script started
+2024-06-25 20:19:36,111 INFO parsing channel crimyakutiaru
+2024-06-25 20:19:36,154 INFO Connecting...
+2024-06-25 20:19:36,222 INFO Connected! Production DC2 - IPv4
+2024-06-25 20:19:36,223 INFO NetworkTask started
+2024-06-25 20:19:36,638 INFO Session initialized: Layer 158
+2024-06-25 20:19:36,639 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
+2024-06-25 20:19:36,639 INFO System: Windows 10 (en)
+2024-06-25 20:19:36,639 INFO Session started
+2024-06-25 20:19:36,643 INFO PingTask started
+2024-06-25 20:19:36,968 INFO Started 16 HandlerTasks
+2024-06-25 20:19:38,700 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
+2024-06-25 20:19:38,713 INFO Stopped 16 HandlerTasks
+2024-06-25 20:19:38,713 INFO PingTask stopped
+2024-06-25 20:19:38,713 INFO Disconnected
+2024-06-25 20:19:38,714 INFO NetworkTask stopped
+2024-06-25 20:19:38,714 INFO Session stopped
+2024-06-25 20:19:38,714 WARNING some errors occurred during script execution
+2024-06-25 20:19:43,177 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:19:43,202 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:19:49,626 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:19:49,653 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:19:55,666 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:19:55,693 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:20:02,903 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:20:02,929 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:20:10,997 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:20:11,030 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:20:19,123 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:20:19,167 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:20:29,006 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:20:29,134 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:20:35,722 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:20:35,748 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:20:41,900 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:20:41,926 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:20:48,720 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:20:48,746 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:20:55,126 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:20:55,153 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:21:03,297 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:21:03,323 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:21:10,229 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:21:10,255 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:21:16,252 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:21:16,282 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:21:23,034 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:21:23,060 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:21:29,322 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:21:29,349 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:21:36,081 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:21:36,108 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:21:42,207 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:21:42,233 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:21:53,982 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:21:54,009 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:00,330 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:00,356 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:06,349 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:06,375 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:13,411 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:13,437 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:16,543 INFO script started
+2024-06-25 20:22:16,543 INFO parsing channel sakhaday
+2024-06-25 20:22:16,587 INFO Connecting...
+2024-06-25 20:22:16,652 INFO Connected! Production DC2 - IPv4
+2024-06-25 20:22:16,652 INFO NetworkTask started
+2024-06-25 20:22:17,034 INFO Session initialized: Layer 158
+2024-06-25 20:22:17,034 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
+2024-06-25 20:22:17,034 INFO System: Windows 10 (en)
+2024-06-25 20:22:17,034 INFO Session started
+2024-06-25 20:22:17,040 INFO PingTask started
+2024-06-25 20:22:17,303 INFO Started 16 HandlerTasks
+2024-06-25 20:22:19,589 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), AttributeError("'NoneType' object has no attribute 'split'"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
+2024-06-25 20:22:19,601 INFO Stopped 16 HandlerTasks
+2024-06-25 20:22:19,602 INFO PingTask stopped
+2024-06-25 20:22:19,602 INFO Disconnected
+2024-06-25 20:22:19,602 INFO NetworkTask stopped
+2024-06-25 20:22:19,602 INFO Session stopped
+2024-06-25 20:22:19,602 WARNING some errors occurred during script execution
+2024-06-25 20:22:22,762 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:22,788 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:28,770 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:28,796 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:34,955 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:34,981 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:41,048 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:41,074 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:47,054 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:47,080 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:53,144 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:53,176 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:22:59,399 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:22:59,427 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:23:05,540 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:23:05,566 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:23:11,776 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:23:11,803 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:23:18,742 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:23:18,767 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:23:24,772 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:23:24,798 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:23:30,877 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:23:30,903 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:23:36,864 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:23:36,892 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:23:43,033 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:23:43,058 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:23:49,904 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:23:49,930 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:23:55,859 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:23:55,991 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:02,300 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:02,327 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:08,211 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:08,241 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:14,571 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:14,596 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:20,552 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:20,578 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:26,386 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:26,412 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:32,591 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:32,618 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:38,500 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:38,629 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:44,988 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:45,014 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:51,062 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:51,088 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:24:57,899 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:24:57,924 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:25:09,441 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:25:09,467 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:25:16,825 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:25:16,851 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:25:23,710 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:25:23,735 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:25:29,660 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:25:29,686 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:25:37,404 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:25:37,429 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:25:43,541 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:25:43,706 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:25:50,672 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:25:50,698 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:25:56,710 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:25:56,735 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:26:03,561 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:26:03,586 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:26:09,446 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:26:09,472 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:26:15,926 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:26:15,952 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:26:21,928 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:26:21,958 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:26:29,337 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:26:29,463 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:26:37,351 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:26:37,379 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:26:43,465 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:26:43,490 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:26:49,394 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:26:49,420 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:26:55,668 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:26:55,695 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:27:02,299 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:27:02,325 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:27:08,336 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:27:08,361 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:27:14,403 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:27:14,431 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:27:20,345 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:27:20,480 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:27:26,673 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:27:26,698 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:27:32,963 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:27:32,989 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:27:38,940 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:27:38,973 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:27:45,075 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:27:45,101 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:27:56,702 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:27:56,728 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:28:03,778 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:28:03,804 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:28:09,823 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:28:09,851 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:28:15,814 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:28:15,946 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:28:18,799 INFO script started
+2024-06-25 20:28:18,799 INFO parsing channel novosty_yakutska
+2024-06-25 20:28:18,847 INFO Connecting...
+2024-06-25 20:28:18,920 INFO Connected! Production DC2 - IPv4
+2024-06-25 20:28:18,920 INFO NetworkTask started
+2024-06-25 20:28:19,309 INFO Session initialized: Layer 158
+2024-06-25 20:28:19,309 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
+2024-06-25 20:28:19,309 INFO System: Windows 10 (en)
+2024-06-25 20:28:19,309 INFO Session started
+2024-06-25 20:28:19,313 INFO PingTask started
+2024-06-25 20:28:19,636 INFO Started 16 HandlerTasks
+2024-06-25 20:28:21,131 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
+2024-06-25 20:28:21,144 INFO Stopped 16 HandlerTasks
+2024-06-25 20:28:21,144 INFO PingTask stopped
+2024-06-25 20:28:21,145 INFO Disconnected
+2024-06-25 20:28:21,145 INFO NetworkTask stopped
+2024-06-25 20:28:21,145 INFO Session stopped
+2024-06-25 20:28:21,145 WARNING some errors occurred during script execution
+2024-06-25 20:28:24,167 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:28:24,193 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:28:30,469 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:28:30,497 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:28:36,556 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:28:36,581 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:28:43,703 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:28:43,729 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:28:49,746 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:28:49,778 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:28:56,060 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:28:56,087 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:29:02,155 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:29:02,187 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:29:08,866 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:29:08,892 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:29:14,853 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:29:14,880 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:29:20,785 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:29:20,817 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:29:26,921 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:29:26,948 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:29:29,833 INFO script started
+2024-06-25 20:29:29,833 INFO parsing channel yakutsk_vecherniy
+2024-06-25 20:29:29,879 INFO Connecting...
+2024-06-25 20:29:29,936 INFO Connected! Production DC2 - IPv4
+2024-06-25 20:29:29,937 INFO NetworkTask started
+2024-06-25 20:29:30,266 INFO Session initialized: Layer 158
+2024-06-25 20:29:30,266 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
+2024-06-25 20:29:30,266 INFO System: Windows 10 (en)
+2024-06-25 20:29:30,266 INFO Session started
+2024-06-25 20:29:30,271 INFO PingTask started
+2024-06-25 20:29:30,446 INFO Started 16 HandlerTasks
+2024-06-25 20:29:31,263 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
+2024-06-25 20:29:31,275 INFO Stopped 16 HandlerTasks
+2024-06-25 20:29:31,276 INFO PingTask stopped
+2024-06-25 20:29:31,276 INFO Disconnected
+2024-06-25 20:29:31,276 INFO NetworkTask stopped
+2024-06-25 20:29:31,276 INFO Session stopped
+2024-06-25 20:29:31,276 WARNING some errors occurred during script execution
+2024-06-25 20:29:34,601 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:29:34,628 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:29:40,745 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:29:40,777 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:29:46,958 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:29:46,984 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:29:54,186 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:29:54,321 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:30:02,198 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:30:02,224 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:30:08,914 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:30:08,940 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:30:15,047 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:30:15,076 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:30:20,845 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:30:20,871 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:30:27,759 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:30:27,789 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:30:33,839 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:30:33,866 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:30:39,710 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:30:39,737 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:30:42,599 INFO script started
+2024-06-25 20:30:42,599 INFO parsing channel yakutsk_newss
+2024-06-25 20:30:42,641 INFO Connecting...
+2024-06-25 20:30:42,712 INFO Connected! Production DC2 - IPv4
+2024-06-25 20:30:42,712 INFO NetworkTask started
+2024-06-25 20:30:43,210 INFO Session initialized: Layer 158
+2024-06-25 20:30:43,210 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
+2024-06-25 20:30:43,210 INFO System: Windows 10 (en)
+2024-06-25 20:30:43,210 INFO Session started
+2024-06-25 20:30:43,220 INFO PingTask started
+2024-06-25 20:30:43,687 INFO Started 16 HandlerTasks
+2024-06-25 20:30:44,694 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
+2024-06-25 20:30:44,708 INFO Stopped 16 HandlerTasks
+2024-06-25 20:30:44,708 INFO PingTask stopped
+2024-06-25 20:30:44,709 INFO Disconnected
+2024-06-25 20:30:44,709 INFO NetworkTask stopped
+2024-06-25 20:30:44,709 INFO Session stopped
+2024-06-25 20:30:44,709 WARNING some errors occurred during script execution
+2024-06-25 20:30:47,816 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:30:47,943 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:30:53,828 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:30:53,861 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:31:00,023 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:31:00,048 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:31:06,675 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:31:06,701 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:31:13,912 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:31:13,940 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:31:17,044 INFO script started
+2024-06-25 20:31:17,044 INFO parsing channel ysiaru
+2024-06-25 20:31:17,090 INFO Connecting...
+2024-06-25 20:31:17,150 INFO Connected! Production DC2 - IPv4
+2024-06-25 20:31:17,150 INFO NetworkTask started
+2024-06-25 20:31:17,521 INFO Session initialized: Layer 158
+2024-06-25 20:31:17,521 INFO Device: CPython 3.11.9 - Pyrogram 2.0.106
+2024-06-25 20:31:17,521 INFO System: Windows 10 (en)
+2024-06-25 20:31:17,521 INFO Session started
+2024-06-25 20:31:17,525 INFO PingTask started
+2024-06-25 20:31:17,792 INFO Started 16 HandlerTasks
+2024-06-25 20:31:18,727 WARNING [UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value"), UnboundLocalError("cannot access local variable 'msg_text' where it is not associated with a value")]
+2024-06-25 20:31:18,739 INFO Stopped 16 HandlerTasks
+2024-06-25 20:31:18,739 INFO PingTask stopped
+2024-06-25 20:31:18,740 INFO Disconnected
+2024-06-25 20:31:18,740 INFO NetworkTask stopped
+2024-06-25 20:31:18,740 INFO Session stopped
+2024-06-25 20:31:18,740 WARNING some errors occurred during script execution
+2024-06-25 20:31:22,046 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:31:22,072 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:31:28,116 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:31:28,143 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:31:35,051 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:31:35,076 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:31:41,409 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:31:41,434 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:31:47,962 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:31:47,987 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:31:54,177 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:31:54,205 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:32:00,637 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:32:00,674 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:32:07,495 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:32:07,521 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:32:14,187 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:32:14,213 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:32:20,787 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:32:20,814 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:32:27,115 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:32:27,142 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:32:33,397 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:32:33,422 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:32:39,652 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:32:39,687 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:32:47,451 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:32:47,477 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:32:54,078 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:32:54,103 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:33:00,198 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:33:00,223 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:33:06,949 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:33:06,983 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:33:13,261 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:33:13,290 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:33:19,625 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:33:19,651 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:33:26,246 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:33:26,272 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:33:32,899 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:33:32,924 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:33:39,339 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:33:39,364 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962
+2024-06-25 20:33:45,484 INFO Loading dictionaries from D:\Git_hub\qoliru\backend\venv\Lib\site-packages\pymorphy3_dicts_ru\data
+2024-06-25 20:33:45,510 INFO format: 2.4, revision: 417150, updated: 2022-01-08T22:09:24.565962

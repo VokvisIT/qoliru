@@ -25,6 +25,8 @@ const messages = {
     rr: "Rating the region",
     one_rr: "Calculating the rating for each category of the region",
     two_rr: "The average value of all categories will be the rating of the region",
+    assessment: "Assessment of the quality of life",
+    close: "Close",
 
   },
   ru: {
@@ -51,6 +53,8 @@ const messages = {
     rr: "Рейтинг региона",
     one_rr: "Подсчитываем рейтинг по каждой категории региона",
     two_rr: "Среднее значение всех категорий будет являться рейтингом региона",
+    assessment: "Оценка качества жизни",
+    close: "Закрыть",
   }
 }
 

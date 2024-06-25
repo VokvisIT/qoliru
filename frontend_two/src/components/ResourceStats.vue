@@ -2,7 +2,7 @@
   <main className="mainlk">
     <div class="lk_region">
       <div className="lk_close btn" @click="toggleResourceStats()">
-        Close
+        {{  $t('close')  }}
       </div>
       <div>
         <div v-if="loading" class="loading">
@@ -20,7 +20,7 @@
                 </div>
                 <div class="region_qolTitle" :style="{ color: barColor }">{{ resources.qol }}</div>
               </div>
-              <div>Assessment of the quality of life</div>
+              <div>{{  $t('assessment')  }}</div>
               <div>Данных собрано: {{ resources.count_data }}</div>
             </div>
           </div>
@@ -124,9 +124,12 @@ export default {
               display: false,
             },
             tooltip: {
+              enabled: true,
               callbacks: {
-                label: function(tooltipItem, data) {
-                  return data.labels[tooltipItem.index] + ': ' + tooltipItem.value;
+                label: function(context) {
+                  const label = context.chart.data.labels[context.dataIndex];
+                  const value = context.raw;
+                  return `${label}: ${value}`;
                 }
               }
             }
@@ -137,7 +140,7 @@ export default {
               borderColor: '#4379EE',
               backgroundColor: 'rgba(66, 182, 246, 0.3)',
               fill: true,
-              tension: 0.2
+              tension: 0.2,
             },
             point: {
               backgroundColor: '#4379EE',
@@ -146,9 +149,9 @@ export default {
               borderColor: '#fff',
               hoverRadius: 6,
               hoverBorderWidth: 2,
-            }
+            },
           },
-          scale: {
+          scales: {
             r: {
               suggestedMin: 0,
               suggestedMax: 10,
@@ -156,30 +159,23 @@ export default {
                 stepSize: 2,
                 showLabelBackdrop: false,
                 font: {
-                  size: 20 // установить размер шрифта
-                },
-                fontSize: {
-                  fontSize: 500
+                  size: 20, // установить размер шрифта
                 },
               },
-              
-            grid: {
-              color: '#ccc',
-              lineWidth: 1,
-            }
+              grid: {
+                color: '#ccc',
+                lineWidth: 1,
+              },
+            },
+          },
+          layout: {
+            padding: 20,
           },
         },
-        layout: {
-          padding: 20,
-          pointLabels: { fontSize:50 },
-          fontSize: 50,
-          text: 50
-        }
-      }
-    });
-    }
-  }
-}
+      });
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -230,9 +226,6 @@ export default {
     cursor: pointer;
 }
 
-.region_info{
-  /* display: flex; */
-}
 .region_name {
   font-weight: 700;
   font-size: 24px;
@@ -269,9 +262,13 @@ export default {
   visibility: hidden;
 }
 .chart_canvas{
-
   width: 600px !important;
   height: 600px !important;
 }
-
+@media (max-width: 768px) {
+  .chart_canvas{
+  width: 300px !important;
+  height: 300px !important;
+}
+}
 </style>

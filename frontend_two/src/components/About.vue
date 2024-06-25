@@ -43,11 +43,13 @@
 }
 
 .about_wrapper{
-  width: 1100px;
-  justify-content: space-around;
+  max-width: 1100px;
+  flex-wrap: wrap;
 }
 .about_item {
-  width: 400px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  max-width: 400px;
   padding: 16px;
   border-radius: 15px;
   background: #fff;

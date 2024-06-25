@@ -1,8 +1,8 @@
 <template>
     <main className="main flex">
-      <Sidebar/>
+      <Sidebar :isMenuActive="isMenuActive" :closeMenu="closeMenu"/>
       <div className="right">
-        <Header/>
+        <Header :toggleMenu="toggleMenu"/>
         <div className="router_container">
           <router-view />
         </div>
@@ -21,6 +21,34 @@
       Header,
       RouterView,
     },
+    data() {
+        return {
+            isMenuActive: false,
+        };
+    },
+    methods: {
+      toggleMenu() {
+        this.isMenuActive = !this.isMenuActive;
+      },
+      closeMenu() {
+        this.isMenuActive = false;
+      },
+      updateBodyClass() {
+            if (this.isMenuActive) {
+                document.body.classList.add('stop-scroll');
+            } else {
+                document.body.classList.remove('stop-scroll');
+            }
+        },
+    },
+    watch: {
+        isMenuActive(newVal) {
+            this.updateBodyClass();
+        }
+    },
+    mounted() {
+        this.updateBodyClass();
+    }
   };
   </script>
 
@@ -28,6 +56,9 @@
 .right {
   width: 100%;
 }
+.stop-scroll {
+    overflow: hidden;
+  }
 .router_container{
   padding: 30px;
 }

@@ -4,7 +4,7 @@
     <div class="map_title">
       {{ $t('map') }}
     </div>
-    <div class="wrapper">
+    <div class="wrapper-map">
       <div class="map_wrapper_title">
         {{ $t('qolir') }}
       </div>
@@ -12,7 +12,7 @@
         <Loader />
       </div>
       <div v-else>
-        <yandex-map
+        <yandex-map class="yandex-map"
               :settings="{
               location: {
                 center: [data[0].latitude, data[0].longitude],
@@ -103,6 +103,12 @@ export default {
 </script>
 
 <style scoped>
+.wrapper-map {
+  max-width: 1400px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 54px 0px rgba(0, 0, 0, 0.05);
+}
 .custom-marker {
   width: 50px;
   height: 50px;

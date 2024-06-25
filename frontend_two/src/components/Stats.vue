@@ -211,6 +211,7 @@ export default {
     flex-wrap: wrap; /* Добавлено для адаптивности */
 }
 .stats_item {
+    height: fit-content;
     position: relative;
     padding: 16px;
     max-width: 300px;
